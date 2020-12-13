@@ -1,21 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import * as React from 'react';
+import AuthenticationNavigator from './navigators/AuthenticationNavigator'
+import LoadAssets from "./src/components/LoadAssets";
+
+const fonts = {
+    "SFProText-Bold": require("./assets/fonts/SF-Pro-Text-Bold.otf"),
+    "SFProText-Semibold": require("./assets/fonts/SF-Pro-Text-Semibold.otf"),
+    "SFProText-Regular": require("./assets/fonts/SF-Pro-Text-Regular.otf"),
+};
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    return (
+        <LoadAssets {...{fonts}}>
+            <AuthenticationNavigator/>
+        </LoadAssets>
+    );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
