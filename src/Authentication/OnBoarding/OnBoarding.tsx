@@ -1,8 +1,8 @@
 import React, {useRef} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import Slide, {SLIDE_HEIGHT} from "./Slide";
 import {SCREEN_WIDTH, SPLASH_SCREEN_BORDER_RADIUS} from "../../../Constants";
-import Animated, {divide, multiply} from 'react-native-reanimated'
+import Animated, {divide, Extrapolate, interpolate, multiply} from 'react-native-reanimated'
 import {interpolateColor, useScrollHandler} from "react-native-redash/lib/module/v1";
 import SubSlide from "./SubSlide";
 import Dot from "./Dot";
@@ -14,7 +14,11 @@ const slides = [
         description: `Confused about your outfit? Don't worry
    Find the best outfit here!`,
         color: "#BFEAF5",
-        picture : require('./ImageSlider/1.png')
+        picture: {
+            src: require('./ImageSlider/1.png'),
+            width: 1080,
+            height: 1440
+        }
     },
     {
         title: "Playful",
@@ -22,21 +26,33 @@ const slides = [
         description: `Hating the clothes is your wardrobe? 
     Explore hundreds of outfit ideas`,
         color: "#BEECC4",
-        picture : require('./ImageSlider/2.png')
+        picture: {
+            src: require('./ImageSlider/2.png'),
+            width: 1080,
+            height: 1440
+        }
     },
     {
         title: "Excentric",
         subTitle: "Your Style, Your Way",
         description: "Create your individual & unique style and look amazing everyday",
         color: "#FFE4D9",
-        picture : require('./ImageSlider/3.png')
+        picture: {
+            src: require('./ImageSlider/3.png'),
+            width: 1080,
+            height: 1440
+        }
     },
     {
         title: "Funky",
         subTitle: "Look Good, Feel Good",
         description: "Discover the latest trends in fashion and explore your personality",
         color: "#FFDDDD",
-        picture : require('./ImageSlider/4.png')
+        picture: {
+            src: require('./ImageSlider/4.png'),
+            width: 1080,
+            height: 1440
+        }
     },
 ]
 const OnBoarding = () => {
@@ -50,6 +66,22 @@ const OnBoarding = () => {
     return (
         <View style={styles.container}>
             <Animated.View style={[styles.slider, {backgroundColor}]}>
+                {slides.map(({picture}, index) => {
+                        const opacity = interpolate(x, {
+                            inputRange: [(index - 0.5) * SCREEN_WIDTH, index * SCREEN_WIDTH, (index + 0.5) * SCREEN_WIDTH],
+                            outputRange: [0, 1, 0],
+                            extrapolate: Extrapolate.CLAMP
+                        })
+                     //   return (<View style={[styles.underLayer,{opacity}]} key={index}>
+                        return (<Animated.View style={[styles.underLayer, {opacity}]} key={index}>
+                            <Image source={picture.src} style={{
+                                width: SCREEN_WIDTH - SPLASH_SCREEN_BORDER_RADIUS,
+                                height: (SCREEN_WIDTH - SPLASH_SCREEN_BORDER_RADIUS) * picture.height / picture.width,
+                            }}/>
+                        </Animated.View>)
+                    }
+                )}
+
                 <Animated.ScrollView horizontal snapToInterval={SCREEN_WIDTH} decelerationRate="fast"
                                      showsHorizontalScrollIndicator={false} bounces={false}
                                      {...scrollHandler}
@@ -106,6 +138,13 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: 'white',
+    },
+    underLayer: {
+        ...StyleSheet.absoluteFillObject,
+        justifyContent: "flex-end",
+        alignItems: "center",
+        borderBottomRightRadius: SPLASH_SCREEN_BORDER_RADIUS,
+        overflow: "hidden"
     },
     slider: {
         height: SLIDE_HEIGHT,

@@ -1,15 +1,20 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {SCREEN_HEIGHT, SCREEN_WIDTH} from "../../../Constants";
+import {Text} from "../../../Theme";
 
 interface SlideProps {
     title: string;
     right?: boolean;
-    picture :number
+    // picture :{
+    //     src: ImageRequireSource,
+    //     width: number,
+    //     height:number
+    // }
 }
 
 export const SLIDE_HEIGHT = 0.61 * SCREEN_HEIGHT;
-const Slide = ({title, right, picture}: SlideProps) => {
+const Slide = ({title, right}: SlideProps) => {
     const transform = [
         {translateY: (SLIDE_HEIGHT - 100) / 2},
         {translateX: right ? (SCREEN_WIDTH / 2 - 50) : (- (SCREEN_WIDTH/2) +50)},
@@ -17,11 +22,14 @@ const Slide = ({title, right, picture}: SlideProps) => {
     ]
     return (
         <View style={styles.container}>
-            <View style={styles.underLayer}>
-                <Image source={picture} style={styles.picture}/>
-            </View>
+            {/*<View style={styles.underLayer}>*/}
+            {/*    <Image source={picture.src} style={{*/}
+            {/*        width: SCREEN_WIDTH- SPLASH_SCREEN_BORDER_RADIUS,*/}
+            {/*        height: (SCREEN_WIDTH- SPLASH_SCREEN_BORDER_RADIUS) * picture.height / picture.width,*/}
+            {/*    }}/>*/}
+            {/*</View>*/}
             <View style={[styles.titleContainer, {transform}]}>
-                <Text style={styles.title}>{title}</Text>
+                <Text  variant="heroTitle">{title}</Text>
             </View>
         </View>
     );
@@ -32,25 +40,14 @@ const styles = StyleSheet.create({
     container: {
         width: SCREEN_WIDTH,
     },
-    underLayer:{
-        ...StyleSheet.absoluteFillObject,
-        justifyContent:"flex-end"
-    },
-    picture:{
-        ...StyleSheet.absoluteFillObject,
-        width: undefined,
-        height: undefined
-    },
+    // underLayer:{
+    //     ...StyleSheet.absoluteFillObject,
+    //     justifyContent:"flex-end",
+    //     alignItems:"center"
+    // },
+
     titleContainer: {
         height: 100,
         justifyContent: "center"
-    },
-
-    title: {
-        fontSize: 80,
-        fontFamily: "SFProText-Bold",
-        color: "white",
-        textAlign: "center"
     }
-
 })

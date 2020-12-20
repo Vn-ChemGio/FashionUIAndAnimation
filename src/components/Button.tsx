@@ -1,6 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {RectButton} from "react-native-gesture-handler";
+import {Text, Theme} from "../../Theme";
+import {useTheme} from "@shopify/restyle";
 
 interface ButtonProps {
     variant: "default" | "primary",
@@ -9,14 +11,15 @@ interface ButtonProps {
 }
 
 const Button = ({variant, label, onPress}: ButtonProps) => {
-    const backgroundColor = variant === "primary" ? "#2CB9B0" : "rgba(12,13,52,0.05)";
-    const color = variant === "primary" ? "white" : "#0C0D34";
+    const theme = useTheme<Theme>();
+    const backgroundColor = variant === "primary" ? theme.colors.primary : theme.colors.secondary
+    const color = variant === "primary" ? theme.colors.textWhite : theme.colors.textDefault;
     return (
         <RectButton
             style={[styles.container, {backgroundColor}]}
             {...{onPress}}
         >
-            <Text style={[styles.label, {color}]}> {label}</Text>
+            <Text variant="button" style={{color}}> {label}</Text>
         </RectButton>
     );
 };
@@ -25,16 +28,10 @@ Button.defaultProp = {variant: "default"}
 export default Button;
 const styles = StyleSheet.create({
     container: {
-        borderRadius: 15,
+        borderRadius: 25,
         height: 50,
         width: 230,
         justifyContent: "center",
-        alignItems: "center"
-
-    },
-    label: {
-        fontSize: 15,
-        fontFamily: "SFProText-Regular",
-        textAlign: "center"
+        alignItems: "center",
     }
 })
