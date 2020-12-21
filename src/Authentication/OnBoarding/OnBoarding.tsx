@@ -117,12 +117,12 @@ const OnBoarding = ({navigation}: StackNavigationProps<Routes, "OnBoarding">) =>
 
 
                                 return <SubSlide
-                                    key={i} {...{subTitle, description, x}}
+                                    key={i} {...{subTitle, description, x, last}}
 
                                     onPress={() => {
                                         if (last)
                                             navigation.navigate("Welcome")
-                                            
+
                                         else
                                             scroll.current?.getNode().scrollTo({x: SCREEN_WIDTH * (i + 1), animated: true})
 

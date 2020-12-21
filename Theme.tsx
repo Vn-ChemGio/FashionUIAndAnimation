@@ -31,7 +31,8 @@ const theme: BaseTheme = createTheme({
         textBody: palette.body,
         primary: palette.primary,
         secondary: palette.secondary,
-
+        grey: "#F4F0EF",
+        white:palette.white
 
     },
     spacing: {
@@ -44,7 +45,7 @@ const theme: BaseTheme = createTheme({
         s: 4,
         m: 10,
         l: 25,
-        xl: 40,
+        xl: 75,
     },
     breakpoints: {
         phone: 0,
