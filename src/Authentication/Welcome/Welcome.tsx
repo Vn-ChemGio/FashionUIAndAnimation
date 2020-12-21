@@ -1,12 +1,12 @@
 import React from 'react';
-import {View} from 'react-native';
+import {Text, View} from 'react-native';
 
 
 const OnBoarding = () => {
 
     return (
         <View>
-
+<Text>111</Text>
 
         </View>
     );

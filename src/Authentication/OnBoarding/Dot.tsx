@@ -3,7 +3,7 @@ import Animated, {Extrapolate, interpolate} from 'react-native-reanimated'
 
 interface DotProps {
     i: number,
-    currentIndex: number
+    currentIndex: Animated.Node<number>
 }
 
 const Dot = ({i, currentIndex}: DotProps) => {

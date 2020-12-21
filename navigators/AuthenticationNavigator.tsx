@@ -1,14 +1,19 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import OnBoarding from "../src/Authentication/OnBoarding";
-const AuthenticationStack = createStackNavigator();
-const AuthenticationNavigator = () => {
-  return (
-      <AuthenticationStack.Navigator headerMode="none">
-        <AuthenticationStack.Screen name="OnBoarding" component={OnBoarding} />
+import {createStackNavigator} from '@react-navigation/stack';
 
-      </AuthenticationStack.Navigator>
-  );
+import {Routes} from "../src/components/Navigation";
+import {OnBoarding, Welcome} from "../src/Authentication";
+
+const AuthenticationStack = createStackNavigator<Routes>();
+
+const AuthenticationNavigator = () => {
+    return (
+        <AuthenticationStack.Navigator headerMode="none">
+            <AuthenticationStack.Screen name="OnBoarding" component={OnBoarding}/>
+            <AuthenticationStack.Screen name="Welcome" component={Welcome}/>
+
+        </AuthenticationStack.Navigator>
+    );
 };
 
 export default AuthenticationNavigator;

@@ -6,6 +6,7 @@ import Animated, {divide, Extrapolate, interpolate, multiply} from 'react-native
 import {interpolateColor, useScrollHandler} from "react-native-redash/lib/module/v1";
 import SubSlide from "./SubSlide";
 import Dot from "./Dot";
+import {Routes, StackNavigationProps} from "../../components/Navigation";
 
 const slides = [
     {
@@ -55,7 +56,7 @@ const slides = [
         }
     },
 ]
-const OnBoarding = () => {
+const OnBoarding = ({navigation}: StackNavigationProps<Routes, "OnBoarding">) => {
     const scroll = useRef<Animated.ScrollView>(null)
     const {scrollHandler, x} = useScrollHandler()
 
@@ -72,7 +73,7 @@ const OnBoarding = () => {
                             outputRange: [0, 1, 0],
                             extrapolate: Extrapolate.CLAMP
                         })
-                     //   return (<View style={[styles.underLayer,{opacity}]} key={index}>
+                        //   return (<View style={[styles.underLayer,{opacity}]} key={index}>
                         return (<Animated.View style={[styles.underLayer, {opacity}]} key={index}>
                             <Image source={picture.src} style={{
                                 width: SCREEN_WIDTH - SPLASH_SCREEN_BORDER_RADIUS,
@@ -101,9 +102,7 @@ const OnBoarding = () => {
                 <View
                     style={styles.footerContent}>
                     <View style={styles.pagination}>
-                        {
-                            slides.map((_, i) => <Dot key={i} currentIndex={divide(x, SCREEN_WIDTH)} {...{i}} />)
-                        }
+                        {slides.map((_, i) => <Dot key={i} currentIndex={divide(SCREEN_WIDTH, x)} {...{i}} />)}
                     </View>
 
                     <Animated.View style={{
@@ -113,16 +112,23 @@ const OnBoarding = () => {
                         transform: [{translateX: multiply(x, -1)}]
 
                     }}>
-                        {slides.map(({subTitle, description}, i) =>
-                            <SubSlide
-                                key={i} {...{subTitle, description, x}}
-                                last={i == (slides.length - 1)}
-                                onPress={() => {
-                                    if (scroll.current) {
-                                        scroll.current.getNode().scrollTo({x: SCREEN_WIDTH * (i + 1), animated: true})
-                                    }
-                                }}
-                            />
+                        {slides.map(({subTitle, description}, i) => {
+                                const last = i == (slides.length - 1);
+
+
+                                return <SubSlide
+                                    key={i} {...{subTitle, description, x}}
+
+                                    onPress={() => {
+                                        if (last)
+                                            navigation.navigate("Welcome")
+                                            
+                                        else
+                                            scroll.current?.getNode().scrollTo({x: SCREEN_WIDTH * (i + 1), animated: true})
+
+                                    }}
+                                />
+                            }
                         )}
                     </Animated.View>
 
