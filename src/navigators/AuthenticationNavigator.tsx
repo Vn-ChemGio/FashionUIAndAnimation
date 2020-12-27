@@ -5,7 +5,7 @@ import {Routes} from "./Navigation";
 import {
     OnBoarding,
     Welcome
-}               from "../src/Authentication";
+}               from "../Authentication";
 
 const AuthenticationStack = createStackNavigator<Routes>();
 

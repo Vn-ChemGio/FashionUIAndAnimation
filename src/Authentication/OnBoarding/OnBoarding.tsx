@@ -24,7 +24,7 @@ import Dot from "./Dot";
 import {
     Routes,
     StackNavigationProps
-}          from "../../../navigators/Navigation";
+}          from "../../navigators/Navigation";
 
 const slides     = [
     {

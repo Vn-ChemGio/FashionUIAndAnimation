@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import * as React              from 'react';
-import AuthenticationNavigator from './navigators/AuthenticationNavigator'
+import AuthenticationNavigator from './src/navigators/AuthenticationNavigator'
 import LoadAssets              from "./src/components/LoadAssets";
 import {ThemeProvider}         from "@shopify/restyle";
 import theme                   from './Theme'

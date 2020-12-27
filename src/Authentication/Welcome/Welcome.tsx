@@ -2,20 +2,20 @@ import React from 'react';
 
 import {
     Box,
+    Button,
     Text,
     Theme
-} from "../../../Theme";
+} from "../../components";
 import {Image}            from "react-native";
 import {
     SCREEN_WIDTH,
     SPLASH_SCREEN_BORDER_RADIUS
 }                         from "../../../Constants";
-import {Button}           from "../../components";
 import {BorderlessButton} from "react-native-gesture-handler";
 import {
     Routes,
     StackNavigationProps
-}                         from "../../../navigators/Navigation";
+}                         from "../../navigators/Navigation";
 import {useTheme}         from "@shopify/restyle";
 
 
