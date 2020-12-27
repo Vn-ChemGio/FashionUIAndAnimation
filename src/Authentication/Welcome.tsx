@@ -4,21 +4,21 @@ import {
     Box,
     Button,
     Text,
-} from "../../components";
+}                         from "../components";
 import {Image}            from "react-native";
 import {
     SCREEN_WIDTH,
     SPLASH_SCREEN_BORDER_RADIUS
-}                         from "../../../Constants";
+}                         from "../../Constants";
 import {BorderlessButton} from "react-native-gesture-handler";
 import {
     Routes,
     StackNavigationProps
-}                         from "../../navigators/Navigation";
+}                         from "../navigators/Navigation";
 
 
 const picture    = {
-    src   : require('../OnBoarding/ImageSlider/5.png'),
+    src   : require('./OnBoarding/ImageSlider/5.png'),
     width : 1080,
     height: 1440
 }
@@ -73,9 +73,9 @@ const OnBoarding = ({navigation}: StackNavigationProps<Routes, "Welcome">) => {
                     />
                     <Button
                         label="Join us, it's Free"
-                        onPress={() => navigation.navigate('OnBoarding')}
+                        onPress={() => navigation.navigate('SignUp')}
                     />
-                    <BorderlessButton onPress={() => navigation.navigate('OnBoarding')}>
+                    <BorderlessButton onPress={() => navigation.navigate('ForgotPassword')}>
                         <Text variant="button" color="textDefault">Forgot password?</Text>
                     </BorderlessButton>
                 </Box>

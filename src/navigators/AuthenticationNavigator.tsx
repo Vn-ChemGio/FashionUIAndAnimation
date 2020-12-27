@@ -5,7 +5,10 @@ import {Routes} from "./Navigation";
 import {
     OnBoarding,
     Welcome,
-    Login
+    Login,
+    SignUp,
+    PasswordChanged,
+    ForgotPassword
 }               from "../Authentication";
 
 const AuthenticationStack = createStackNavigator<Routes>();
@@ -16,7 +19,9 @@ const AuthenticationNavigator = () => {
             <AuthenticationStack.Screen name="OnBoarding" component={OnBoarding}/>
             <AuthenticationStack.Screen name="Welcome" component={Welcome}/>
             <AuthenticationStack.Screen name="Login" component={Login}/>
-
+            <AuthenticationStack.Screen name="SignUp" component={SignUp}/>
+            <AuthenticationStack.Screen name="ForgotPassword" component={ForgotPassword}/>
+            <AuthenticationStack.Screen name="PasswordChanged" component={PasswordChanged}/>
         </AuthenticationStack.Navigator>
     );
 };

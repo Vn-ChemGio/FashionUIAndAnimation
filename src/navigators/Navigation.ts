@@ -10,5 +10,8 @@ export interface StackNavigationProps<ParamList extends ParamListBase,
 export type Routes = {
     OnBoarding: undefined;
     Welcome: undefined;
-    Login: undefined
+    Login: undefined,
+    SignUp:undefined,
+    ForgotPassword: undefined,
+    PasswordChanged: undefined
 }
