@@ -60,12 +60,12 @@ const theme: BaseTheme = createTheme({
             textAlign: "center"
         },
         lTitle: {
-            fontFamily: "SFProText-Semibold",
+            fontFamily: "SFProText-SemiBold",
             fontSize: 28,
             color: "textDefault",
         },
         title: {
-            fontFamily: "SFProText-Semibold",
+            fontFamily: "SFProText-SemiBold",
             fontSize: 24,
             lineHeight: 30,
             color: "textDefault",

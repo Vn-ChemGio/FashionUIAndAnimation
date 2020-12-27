@@ -1,16 +1,25 @@
 import React from 'react';
 
-import {Box, Text} from "../../../Theme";
-import {Image} from "react-native";
-import {SCREEN_WIDTH, SPLASH_SCREEN_BORDER_RADIUS} from "../../../Constants";
-import {Button} from "../../components";
+import {
+    Box,
+    Text
+}                         from "../../../Theme";
+import {Image}            from "react-native";
+import {
+    SCREEN_WIDTH,
+    SPLASH_SCREEN_BORDER_RADIUS
+}                         from "../../../Constants";
+import {Button}           from "../../components";
 import {BorderlessButton} from "react-native-gesture-handler";
-import {Routes, StackNavigationProps} from "../../components/Navigation";
+import {
+    Routes,
+    StackNavigationProps
+}                         from "../../components/Navigation";
 
 
-const picture = {
-    src: require('../OnBoarding/ImageSlider/5.png'),
-    width: 1080,
+const picture    = {
+    src   : require('../OnBoarding/ImageSlider/5.png'),
+    width : 1080,
     height: 1440
 }
 const OnBoarding = ({navigation}: StackNavigationProps<Routes, "Welcome">) => {
@@ -26,12 +35,16 @@ const OnBoarding = ({navigation}: StackNavigationProps<Routes, "Welcome">) => {
                 <Image
                     source={picture.src}
                     style={{
-                        width: SCREEN_WIDTH - SPLASH_SCREEN_BORDER_RADIUS*2,
-                        height: ((SCREEN_WIDTH - SPLASH_SCREEN_BORDER_RADIUS *2) * picture.height) / picture.width
+                        width : SCREEN_WIDTH - SPLASH_SCREEN_BORDER_RADIUS * 2,
+                        height: (
+                                    (
+                                        SCREEN_WIDTH - SPLASH_SCREEN_BORDER_RADIUS * 2
+                                    ) * picture.height
+                                ) / picture.width
                     }}
                 />
             </Box>
-            <Box flex={1} borderBottomRightRadius="xl">
+            <Box flex={1} borderBottomRightRadius={45} >
                 <Box
                     backgroundColor="grey"
                     position="absolute"

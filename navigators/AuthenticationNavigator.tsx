@@ -2,7 +2,10 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {Routes} from "../src/components/Navigation";
-import {OnBoarding, Welcome} from "../src/Authentication";
+import {
+    OnBoarding,
+    Welcome
+}               from "../src/Authentication";
 
 const AuthenticationStack = createStackNavigator<Routes>();
 

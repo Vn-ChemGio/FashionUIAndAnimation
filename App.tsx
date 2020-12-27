@@ -1,14 +1,14 @@
 import 'react-native-gesture-handler';
-import * as React from 'react';
+import * as React              from 'react';
 import AuthenticationNavigator from './navigators/AuthenticationNavigator'
-import LoadAssets from "./src/components/LoadAssets";
-import {ThemeProvider} from "@shopify/restyle";
-import theme from './Theme'
+import LoadAssets              from "./src/components/LoadAssets";
+import {ThemeProvider}         from "@shopify/restyle";
+import theme                   from './Theme'
 
 const fonts = {
-    "SFProText-Bold": require("./assets/fonts/SF-Pro-Text-Bold.otf"),
-    "SFProText-Semibold": require("./assets/fonts/SF-Pro-Text-Semibold.otf"),
-    "SFProText-Regular": require("./assets/fonts/SF-Pro-Text-Regular.otf"),
+    "SFProText-Bold"    : require("./assets/fonts/SF-Pro-Text-Bold.otf"),
+    "SFProText-SemiBold": require("./assets/fonts/SF-Pro-Text-SemiBold.otf"),
+    "SFProText-Regular" : require("./assets/fonts/SF-Pro-Text-Regular.otf"),
 };
 
 export default function App() {
