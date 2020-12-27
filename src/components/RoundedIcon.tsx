@@ -35,4 +35,4 @@ const RoundedIcon = ({name, size, color, backgroundColor}: RoundedIconProps) => 
     )
 }
 
-export default RoundedIcon
+export default RoundedIcon;

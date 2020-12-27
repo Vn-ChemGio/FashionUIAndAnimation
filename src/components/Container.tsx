@@ -15,9 +15,9 @@ import Constants                 from "expo-constants";
 import {useTheme}                from "@shopify/restyle";
 
 export const assets            = [
-    require('./assets/pattrens/1.jpg'),
-    require('./assets/pattrens/2.png'),
-    require('./assets/pattrens/3.png')
+    require('./assets/patterns/1.jpg'),
+    require('./assets/patterns/2.png'),
+    require('./assets/patterns/3.png'),
 ] as const;
 const {width, height: wHeight} = Dimensions.get('window');
 const aspectRatio              = 391 / 626;
@@ -43,7 +43,7 @@ const Container = ({children, footer, pattren}: ContainerProps) => {
             )} backgroundColor="secondary">
                 <Box backgroundColor="white">
                     <Box
-                        borderBottomLeftRadius={theme.borderRadii?.xl}
+                        borderBottomLeftRadius="xl"
                         overflow="hidden"
                         height={height * 0.60}
                     >
@@ -69,7 +69,7 @@ const Container = ({children, footer, pattren}: ContainerProps) => {
                     />
                     <Box
                         flex={1}
-                        borderRadius={theme.borderRadii?.xl}
+                        borderRadius="xl"
                         backgroundColor="white"
                         borderTopLeftRadius={0}
                     >

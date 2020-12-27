@@ -4,7 +4,6 @@ import {
     Box,
     Button,
     Text,
-    Theme
 } from "../../components";
 import {Image}            from "react-native";
 import {
@@ -16,7 +15,6 @@ import {
     Routes,
     StackNavigationProps
 }                         from "../../navigators/Navigation";
-import {useTheme}         from "@shopify/restyle";
 
 
 const picture    = {
@@ -25,13 +23,12 @@ const picture    = {
     height: 1440
 }
 const OnBoarding = ({navigation}: StackNavigationProps<Routes, "Welcome">) => {
-    const theme = useTheme<Theme>();
 
     return (
         <Box flex={1} backgroundColor="white">
             <Box
                 flex={1}
-                borderBottomRightRadius={theme.borderRadii?.xl || 75}
+                borderBottomRightRadius="xl"
                 backgroundColor="grey"
                 alignItems="center"
                 justifyContent="flex-end"
@@ -48,7 +45,7 @@ const OnBoarding = ({navigation}: StackNavigationProps<Routes, "Welcome">) => {
                     }}
                 />
             </Box>
-            <Box flex={1} borderBottomRightRadius={theme.borderRadii?.xl || 75}>
+            <Box flex={1}>
                 <Box
                     backgroundColor="grey"
                     position="absolute"
@@ -62,7 +59,7 @@ const OnBoarding = ({navigation}: StackNavigationProps<Routes, "Welcome">) => {
                     justifyContent="space-evenly"
                     alignItems="center"
                     backgroundColor="white"
-                    borderTopLeftRadius={theme.borderRadii?.xl || 75}
+                    borderTopLeftRadius="xl"
                     padding="xl"
                 >
                     <Text variant="title">Let's get started</Text>
@@ -72,7 +69,7 @@ const OnBoarding = ({navigation}: StackNavigationProps<Routes, "Welcome">) => {
                     <Button
                         variant="primary"
                         label="Have an account? Login"
-                        onPress={() => navigation.navigate('OnBoarding')}
+                        onPress={() => navigation.navigate('Login')}
                     />
                     <Button
                         label="Join us, it's Free"

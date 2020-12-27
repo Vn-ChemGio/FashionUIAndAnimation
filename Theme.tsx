@@ -15,25 +15,30 @@ const palette = {
     textDefault: '#0C0D34',
     body: "rgba(12,13,52,0.7)",
     primary: "#2CB9B0",
-    secondary: "rgba(12,13,52,0.05)"
+    primaryLight: "#E7F9F7",
+    secondary: "#0C0D34",
 
 };
 
 
 const theme: BaseTheme = createTheme({
     colors: {
-        mainBackground: palette.white,
+        mainBackground       : palette.white,
         cardPrimaryBackground: palette.purplePrimary,
 
 
-        textWhite: palette.white,
-        textDefault: palette.textDefault,
-        textBody: palette.body,
-        primary: palette.primary,
-        secondary: palette.secondary,
-        grey: "#F4F0EF",
-        white:palette.white
+        textWhite   : palette.white,
+        textDefault : palette.textDefault,
+        textBody    : palette.body,
+        primary     : palette.primary,
+        primaryLight: palette.primaryLight,
+        secondary   : palette.secondary,
 
+        white: palette.white,
+        text : "rgba(12, 13, 52, 0.7)",
+        grey: "rgba(12, 13, 52, 0.05)",
+        black : "black",
+        danger: "#FF0058"
     },
     spacing: {
         s: 8,

@@ -34,7 +34,7 @@ const TextInput = forwardRef<RNTextInput, TextInputProps>(
             <Box
                 height={48}
                 flexDirection="row"
-                borderRadius={theme.borderRadii?.s}
+                borderRadius="s"
                 alignItems="center"
                 borderColor={reColor}
                 borderWidth={StyleSheet.hairlineWidth}

@@ -1,12 +1,10 @@
 import React              from 'react'
 import {
     Text,
-    Box,
-    Theme
+    Box
 } from '..';
 import {Feather as Icon}  from '@expo/vector-icons'
 import {BorderlessButton} from 'react-native-gesture-handler';
-import {useTheme}         from "@shopify/restyle";
 
 interface CheckBoxProps {
     label: string;
@@ -15,7 +13,7 @@ interface CheckBoxProps {
 }
 
 const CheckBox = ({label, checked, onChange}: CheckBoxProps) => {
-    const  theme= useTheme<Theme>()
+
     return (
         <BorderlessButton
             onPress={() => onChange()}
@@ -25,7 +23,7 @@ const CheckBox = ({label, checked, onChange}: CheckBoxProps) => {
                 <Box
                     width={20}
                     height={20}
-                    borderRadius={theme.borderRadii?.s}
+                    borderRadius="s"
                     justifyContent="center"
                     alignItems="center"
                     borderWidth={1}

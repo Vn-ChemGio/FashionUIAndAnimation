@@ -63,7 +63,7 @@ const SocialIcon = ({children}: SocialIconProps) => {
         <Box
             width={SIZE}
             height={SIZE}
-            borderRadius={theme.borderRadii?.l }
+            borderRadius="l"
             marginHorizontal="s"
             backgroundColor="white"
             justifyContent="center"
