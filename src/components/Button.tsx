@@ -24,7 +24,8 @@ const Button = ({variant, label, onPress}: ButtonProps) => {
     );
 };
 
-Button.defaultProp = {variant: "default"}
+Button.defaultProps  = {variant: "default"}
+
 export default Button;
 const styles = StyleSheet.create({
     container: {

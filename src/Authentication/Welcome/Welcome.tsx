@@ -2,8 +2,9 @@ import React from 'react';
 
 import {
     Box,
-    Text
-}                         from "../../../Theme";
+    Text,
+    Theme
+} from "../../../Theme";
 import {Image}            from "react-native";
 import {
     SCREEN_WIDTH,
@@ -15,6 +16,7 @@ import {
     Routes,
     StackNavigationProps
 }                         from "../../components/Navigation";
+import {useTheme}         from "@shopify/restyle";
 
 
 const picture    = {
@@ -23,11 +25,13 @@ const picture    = {
     height: 1440
 }
 const OnBoarding = ({navigation}: StackNavigationProps<Routes, "Welcome">) => {
+    const theme = useTheme<Theme>();
+
     return (
         <Box flex={1} backgroundColor="white">
             <Box
                 flex={1}
-                borderBottomRightRadius="xl"
+                borderBottomRightRadius={theme.borderRadii?.xl || 75}
                 backgroundColor="grey"
                 alignItems="center"
                 justifyContent="flex-end"
@@ -44,7 +48,7 @@ const OnBoarding = ({navigation}: StackNavigationProps<Routes, "Welcome">) => {
                     }}
                 />
             </Box>
-            <Box flex={1} borderBottomRightRadius={45} >
+            <Box flex={1} borderBottomRightRadius={theme.borderRadii?.xl || 75}>
                 <Box
                     backgroundColor="grey"
                     position="absolute"
@@ -58,7 +62,7 @@ const OnBoarding = ({navigation}: StackNavigationProps<Routes, "Welcome">) => {
                     justifyContent="space-evenly"
                     alignItems="center"
                     backgroundColor="white"
-                    borderTopLeftRadius="xl"
+                    borderTopLeftRadius={theme.borderRadii?.xl || 75}
                     padding="xl"
                 >
                     <Text variant="title">Let's get started</Text>
