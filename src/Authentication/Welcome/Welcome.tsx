@@ -15,7 +15,7 @@ import {BorderlessButton} from "react-native-gesture-handler";
 import {
     Routes,
     StackNavigationProps
-}                         from "../../components/Navigation";
+}                         from "../../../navigators/Navigation";
 import {useTheme}         from "@shopify/restyle";
 
 

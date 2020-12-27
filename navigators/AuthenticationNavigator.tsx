@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {Routes} from "../src/components/Navigation";
+import {Routes} from "./Navigation";
 import {
     OnBoarding,
     Welcome

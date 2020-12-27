@@ -20,11 +20,11 @@ import {
     useScrollHandler
 }                            from "react-native-redash/lib/module/v1";
 import SubSlide              from "./SubSlide";
-import Dot                   from "./Dot";
+import Dot from "./Dot";
 import {
     Routes,
     StackNavigationProps
-}                            from "../../components/Navigation";
+}          from "../../../navigators/Navigation";
 
 const slides     = [
     {
@@ -159,7 +159,7 @@ const OnBoarding = ({navigation}: StackNavigationProps<Routes, "OnBoarding">) =>
 
                                         else
                                             scroll.current?.getNode().scrollTo({
-                                                x: SCREEN_WIDTH * (
+                                                x          : SCREEN_WIDTH * (
                                                     i + 1
                                                 ), animated: true
                                             })
