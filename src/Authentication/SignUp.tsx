@@ -50,7 +50,7 @@ const SignUp = ({navigation}: StackNavigationProps<AuthenticationRoutes, "SignUp
 
     return (
         <Container pattren={1} {...{footer}}>
-            <Box padding="xl">
+
                 <Text variant="title1" textAlign="center" marginBottom="l">
                     Create account
                 </Text>
@@ -112,7 +112,6 @@ const SignUp = ({navigation}: StackNavigationProps<AuthenticationRoutes, "SignUp
                         />
                     </Box>
                 </Box>
-            </Box>
         </Container>
     )
 }
