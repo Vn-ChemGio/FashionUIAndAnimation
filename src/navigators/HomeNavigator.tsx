@@ -1,9 +1,8 @@
-import React                   from 'react';
-import {createDrawerNavigator} from "@react-navigation/drawer";
-
-import {
-    View
-} from "react-native";
+import React                                         from 'react';
+import {createDrawerNavigator, DrawerNavigationProp} from "@react-navigation/drawer";
+import {View}                                        from "react-native";
+import DrawerContent                                 from "../App/Drawer/Drawer";
+import {RouteProp}                                   from "@react-navigation/native";
 
 const AppDrawer = createDrawerNavigator<HomeRoutes>();
 
@@ -15,9 +14,9 @@ export type HomeRoutes = {
 
 const HomeNavigator = () => {
     return (
-        <AppDrawer.Navigator>
-            <AppDrawer.Screen name="Home" component={HomeScreen} />
-            <AppDrawer.Screen name="Notifications" component={NotificationsScreen} />
+        <AppDrawer.Navigator drawerContent={DrawerContent}>
+            <AppDrawer.Screen name="Home" component={HomeScreen}/>
+            <AppDrawer.Screen name="Notifications" component={NotificationsScreen}/>
         </AppDrawer.Navigator>
     );
 };
@@ -25,16 +24,22 @@ const HomeNavigator = () => {
 
 function HomeScreen() {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
 
         </View>
     );
 }
+
 function NotificationsScreen() {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:"red"}}>
+        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "red"}}>
         </View>
     );
+}
+
+export interface HomeNavigationProps<RouteName extends keyof HomeRoutes> {
+    navigation: DrawerNavigationProp<HomeRoutes, RouteName>;
+    route: RouteProp<HomeRoutes, RouteName>;
 }
 
 

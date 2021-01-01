@@ -38,9 +38,9 @@ const Login = ({navigation}: AuthenticationProps<"Login">) => {
               values,
               errors,
               touched,
-              setFieldValue
+              setFieldValue,
           }           = useFormik({
-        initialValues   : {email: '', password: '', remember: true},
+        initialValues   : {email: 'vn.chemgio@yahoo.com', password: '1234dadad5678', remember: true},
         validationSchema: LoginSchema,
         onSubmit        : () => navigation.navigate("Home")
     });
@@ -67,6 +67,7 @@ const Login = ({navigation}: AuthenticationProps<"Login">) => {
                     returnKeyType="next"
                     returnKeyLabel="next"
                     autoCorrect={false}
+                    value={values.email}
                     onSubmitEditing={() => passwordRef.current?.focus()}
                 />
                 <TextInput
@@ -83,6 +84,7 @@ const Login = ({navigation}: AuthenticationProps<"Login">) => {
                     returnKeyType="go"
                     returnKeyLabel="go"
                     onSubmitEditing={() => handleSubmit()}
+                    value={values.password}
                     secureTextEntry
                 />
                 <Box flexDirection="row" justifyContent="space-between" alignItems="center">

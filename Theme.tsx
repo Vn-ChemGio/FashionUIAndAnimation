@@ -18,6 +18,12 @@ const palette = {
     primaryLight: "#E7F9F7",
     secondary: "#0C0D34",
 
+    green: "#2CB9B0",
+    orange: "#FE5E33",
+    yellow: "#FFC641",
+    pink: "#FF87A2",
+    violet: "#442CB9",
+    lightBlue: "#BFEAF5",
 };
 
 
@@ -38,7 +44,16 @@ const theme: BaseTheme = createTheme({
         text : "rgba(12, 13, 52, 0.7)",
         grey: "rgba(12, 13, 52, 0.05)",
         black : "black",
-        danger: "#FF0058"
+        danger: "#FF0058",
+
+        background: palette.white,
+        background2: "#F6F6F6",
+        graph1: palette.orange,
+        graph2: palette.yellow,
+        drawer1: palette.orange,
+        drawer2: palette.yellow,
+        drawer3: palette.pink,
+        drawer4: palette.violet,
     },
     spacing: {
         s: 8,
@@ -87,7 +102,13 @@ const theme: BaseTheme = createTheme({
             fontFamily: "SFProText-Regular",
             fontSize: 15,
             color: "textBody",
-        }
+        },
+        header: {
+            fontSize: 12,
+            lineHeight: 24,
+            fontFamily: "SFProText-SemiBold",
+            color: "secondary",
+        },
     },
 
 });
