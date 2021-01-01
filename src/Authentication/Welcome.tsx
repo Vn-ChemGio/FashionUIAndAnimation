@@ -1,20 +1,10 @@
 import React from 'react';
 
-import {
-    Box,
-    Button,
-    Text,
-}                         from "../components";
-import {Image}            from "react-native";
-import {
-    SCREEN_WIDTH,
-    SPLASH_SCREEN_BORDER_RADIUS
-}                         from "../../Constants";
-import {BorderlessButton} from "react-native-gesture-handler";
-import {
-    AuthenticationRoutes,
-    StackNavigationProps
-}                         from "../navigators/Navigation";
+import {Box, Button, Text,}                         from "../components";
+import {Image}                                      from "react-native";
+import {SCREEN_WIDTH, SPLASH_SCREEN_BORDER_RADIUS}  from "../../Constants";
+import {BorderlessButton}                           from "react-native-gesture-handler";
+import {AuthenticationRoutes, StackNavigationProps} from "../navigators";
 
 
 const picture    = {

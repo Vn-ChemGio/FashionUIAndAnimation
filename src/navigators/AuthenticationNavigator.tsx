@@ -1,7 +1,5 @@
 import React                  from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-
-import {AuthenticationRoutes} from "./Navigation";
 import {
     OnBoarding,
     Welcome,
@@ -10,6 +8,17 @@ import {
     PasswordChanged,
     ForgotPassword
 }               from "../Authentication";
+
+
+export type AuthenticationRoutes = {
+    OnBoarding: undefined;
+    Welcome: undefined;
+    Login: undefined,
+    SignUp:undefined,
+    ForgotPassword: undefined,
+    PasswordChanged: undefined
+}
+
 
 const AuthenticationStack = createStackNavigator<AuthenticationRoutes>();
 

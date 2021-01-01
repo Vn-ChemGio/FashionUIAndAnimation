@@ -2,19 +2,11 @@ import React, {useRef}            from 'react'
 import * as Yup                   from 'yup';
 import {TextInput as RNTextInput} from 'react-native'
 
-import {
-    Container,
-    Box,
-    Text,
-    Button
-}                  from '../components'
-import Footer      from '../../layouts/Footer';
-import {
-    StackNavigationProps,
-    AuthenticationRoutes
-}                  from '../navigators/Navigation'
-import TextInput   from '../components/Form/TextInput'
-import {useFormik} from 'formik'
+import {Container, Box, Text, Button}               from '../components'
+import Footer                                       from '../../layouts/Footer';
+import {StackNavigationProps, AuthenticationRoutes} from '../navigators'
+import TextInput                                    from '../components/Form/TextInput'
+import {useFormik}                                  from 'formik'
 
 const SignUpSchema = Yup.object().shape({
     password            : Yup.string()

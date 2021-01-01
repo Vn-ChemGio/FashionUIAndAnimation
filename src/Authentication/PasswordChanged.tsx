@@ -1,7 +1,6 @@
 import React from 'react'
-import { StackNavigationProps, AuthenticationRoutes } from '../navigators/Navigation';
-import { Container, Button, Text, Box,
-    RoundedIconButton, RoundedIcon } from '../components'
+import { StackNavigationProps, AuthenticationRoutes } from '../navigators';
+import { Container, Button, Text, Box, RoundedIconButton, RoundedIcon } from '../components'
 
 const SIZE = 70;
 

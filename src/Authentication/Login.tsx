@@ -1,22 +1,15 @@
 import React, {useRef}            from 'react'
 import {TextInput as RNTextInput} from 'react-native'
 
-import {
-    StackNavigationProps,
-    AuthenticationRoutes
-}                         from '../navigators/Navigation';
-import {
-    Container,
-    Button,
-    Text,
-    Box
-}                         from '../components'
-import TextInput          from '../components/Form/TextInput';
-import CheckBox           from '../components/Form/CheckBox';
-import {useFormik}        from 'formik';
-import * as Yup           from 'yup';
-import Footer             from '../../layouts/Footer';
-import {BorderlessButton} from 'react-native-gesture-handler';
+import {Container, Button, Text, Box}               from '../components'
+import TextInput                                    from '../components/Form/TextInput';
+import CheckBox                                     from '../components/Form/CheckBox';
+import {useFormik}                                  from 'formik';
+import * as Yup                                     from 'yup';
+import Footer                                       from '../../layouts/Footer';
+import {BorderlessButton}                           from 'react-native-gesture-handler';
+import {AuthenticationRoutes, StackNavigationProps} from "../navigators";
+
 
 const LoginSchema = Yup.object().shape({
     password: Yup.string()

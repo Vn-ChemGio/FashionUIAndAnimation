@@ -1,49 +1,23 @@
 import React                   from 'react';
-import {createDrawerNavigator} from "@react-navigation/drawer";
+import {createStackNavigator}  from '@react-navigation/stack';
 
-import {AppRoutes} from "./Navigation";
-import {
-    OnBoarding,
-    Welcome,
-    Login,
-    SignUp,
-    PasswordChanged,
-    ForgotPassword
-} from "../Authentication";
-import {
-    Button,
-    View
-} from "react-native";
+import {AuthenticationNavigator, HomeNavigator} from ".";
 
-const AppDrawrer = createDrawerNavigator<AppRoutes>();
 
-const AuthenticationNavigator = () => {
+export type AppStackRouters = {
+    Authentication: undefined,
+    Home          : undefined
+}
+
+const AppStack = createStackNavigator<AppStackRouters>();
+
+const AppNavigator = () => {
     return (
-        <AppDrawrer.Navigator initialRouteName="Home">
-            <AppDrawrer.Screen name="Home" component={HomeScreen} />
-            <AppDrawrer.Screen name="Notifications" component={NotificationsScreen} />
-        </AppDrawrer.Navigator>
+        <AppStack.Navigator headerMode="none">
+            <AppStack.Screen name="Authentication" component={AuthenticationNavigator}/>
+            <AppStack.Screen name="Home" component={HomeNavigator}/>
+        </AppStack.Navigator>
     );
 };
 
-
-function HomeScreen({ navigation }) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Button
-                onPress={() => navigation.navigate('Notifications')}
-                title="Go to notifications"
-            />
-        </View>
-    );
-}
-function NotificationsScreen({ navigation }) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Button onPress={() => navigation.goBack()} title="Go back home" />
-        </View>
-    );
-}
-
-
-export default AuthenticationNavigator;
+export default AppNavigator;
