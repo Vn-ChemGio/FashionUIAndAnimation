@@ -36,7 +36,7 @@ const ForgotPassword = ({navigation}: StackNavigationProps<AuthenticationRoutes,
     return (
         <Container pattren={2} {...{footer}}>
 
-            <Text variant="title1" textAlign="center" marginBottom="l">
+            <Text variant="lTitle" textAlign="center" marginBottom="l">
                 Forgot password?
             </Text>
             <Text variant="body" textAlign="center" marginBottom="l">

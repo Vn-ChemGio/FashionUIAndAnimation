@@ -98,7 +98,7 @@ const Login = ({navigation}: LoginProps) => {
                         checked={values.remember}
                         onChange={() => setFieldValue('remember', !values.remember)}
                     />
-                    <BorderlessButton onPress={() => navigation.navigate("OnBoarding")}>
+                    <BorderlessButton onPress={() => navigation.navigate("ForgotPassword")}>
                         <Text variant="button" color="primary">Forgot password</Text>
                     </BorderlessButton>
                 </Box>

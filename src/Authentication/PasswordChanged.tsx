@@ -27,7 +27,7 @@ const PasswordChanged = ({navigation}: StackNavigationProps<AuthenticationRoutes
                     backgroundColor="primaryLight"
                 />
             </Box>
-            <Text variant="title1" textAlign="center" marginBottom="l">
+            <Text variant="lTitle" textAlign="center" marginBottom="l">
                 Your password was successfully changed
             </Text>
             <Text variant="body" textAlign="center" marginBottom="l">
