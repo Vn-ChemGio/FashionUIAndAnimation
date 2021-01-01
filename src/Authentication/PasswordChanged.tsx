@@ -1,11 +1,11 @@
 import React from 'react'
-import { StackNavigationProps, Routes } from '../navigators/Navigation';
+import { StackNavigationProps, AuthenticationRoutes } from '../navigators/Navigation';
 import { Container, Button, Text, Box,
     RoundedIconButton, RoundedIcon } from '../components'
 
 const SIZE = 70;
 
-const PasswordChanged = ({ navigation }: StackNavigationProps<Routes, "PasswordChanged">) => {
+const PasswordChanged = ({ navigation }: StackNavigationProps<AuthenticationRoutes, "PasswordChanged">) => {
 
     return (
         <Container pattren={0} footer={

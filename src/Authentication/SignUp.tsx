@@ -11,7 +11,7 @@ import {
 import Footer      from '../../layouts/Footer';
 import {
     StackNavigationProps,
-    Routes
+    AuthenticationRoutes
 }                  from '../navigators/Navigation'
 import TextInput   from '../components/Form/TextInput'
 import {useFormik} from 'formik'
@@ -29,7 +29,7 @@ const SignUpSchema = Yup.object().shape({
         .required('Required'),
 });
 
-const SignUp = ({navigation}: StackNavigationProps<Routes, "SignUp">) => {
+const SignUp = ({navigation}: StackNavigationProps<AuthenticationRoutes, "SignUp">) => {
     const footer               = (
         <Footer
             title="Already have an account?"

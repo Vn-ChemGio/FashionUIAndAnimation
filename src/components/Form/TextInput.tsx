@@ -22,7 +22,7 @@ const TextInput = forwardRef<RNTextInput, TextInputProps>(
     ({icon, touched, error, ...props}, ref) => {
         const  theme= useTheme<Theme>()
         const SIZE  = (
-                          theme.borderRadii ? theme.borderRadii?.m | 16 : 16
+                          theme.borderRadii ? theme.borderRadii?.m | 10 : 10
                       ) * 2.5;
 
         const reColor = !touched ? "text" : (

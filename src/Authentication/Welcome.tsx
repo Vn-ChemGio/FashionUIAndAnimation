@@ -12,7 +12,7 @@ import {
 }                         from "../../Constants";
 import {BorderlessButton} from "react-native-gesture-handler";
 import {
-    Routes,
+    AuthenticationRoutes,
     StackNavigationProps
 }                         from "../navigators/Navigation";
 
@@ -22,7 +22,7 @@ const picture    = {
     width : 1080,
     height: 1440
 }
-const OnBoarding = ({navigation}: StackNavigationProps<Routes, "Welcome">) => {
+const OnBoarding = ({navigation}: StackNavigationProps<AuthenticationRoutes, "Welcome">) => {
 
     return (
         <Box flex={1} backgroundColor="white">

@@ -1,7 +1,7 @@
 import React                  from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {Routes} from "./Navigation";
+import {AuthenticationRoutes} from "./Navigation";
 import {
     OnBoarding,
     Welcome,
@@ -11,7 +11,7 @@ import {
     ForgotPassword
 }               from "../Authentication";
 
-const AuthenticationStack = createStackNavigator<Routes>();
+const AuthenticationStack = createStackNavigator<AuthenticationRoutes>();
 
 const AuthenticationNavigator = () => {
     return (

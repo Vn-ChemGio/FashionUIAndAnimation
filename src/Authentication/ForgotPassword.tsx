@@ -3,7 +3,7 @@ import {Linking} from 'react-native'
 
 import {
     StackNavigationProps,
-    Routes
+    AuthenticationRoutes
 }                  from '../navigators/Navigation';
 import {
     Container,
@@ -22,7 +22,7 @@ const ForgotPasswordSchema = Yup.object().shape({
         .required('Required'),
 });
 
-const ForgotPassword = ({navigation}: StackNavigationProps<Routes, "ForgotPassword">) => {
+const ForgotPassword = ({navigation}: StackNavigationProps<AuthenticationRoutes, "ForgotPassword">) => {
     const footer = (
         <Footer
             title="Don't work?"

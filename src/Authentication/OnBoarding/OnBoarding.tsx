@@ -22,7 +22,7 @@ import {
 import SubSlide              from "./SubSlide";
 import Dot from "./Dot";
 import {
-    Routes,
+    AuthenticationRoutes,
     StackNavigationProps
 }          from "../../navigators/Navigation";
 
@@ -74,7 +74,7 @@ const slides     = [
         }
     },
 ]
-const OnBoarding = ({navigation}: StackNavigationProps<Routes, "OnBoarding">) => {
+const OnBoarding = ({navigation}: StackNavigationProps<AuthenticationRoutes, "OnBoarding">) => {
     const scroll             = useRef<Animated.ScrollView>(null)
     const {scrollHandler, x} = useScrollHandler()
 

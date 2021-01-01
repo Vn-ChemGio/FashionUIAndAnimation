@@ -3,7 +3,7 @@ import {TextInput as RNTextInput} from 'react-native'
 
 import {
     StackNavigationProps,
-    Routes
+    AuthenticationRoutes
 }                         from '../navigators/Navigation';
 import {
     Container,
@@ -28,7 +28,7 @@ const LoginSchema = Yup.object().shape({
         .required('Required'),
 });
 
-const Login = ({navigation}: StackNavigationProps<Routes, "Login">) => {
+const Login = ({navigation}: StackNavigationProps<AuthenticationRoutes, "Login">) => {
     const footer      = (
         <Footer
             title="Don't have an account?"
