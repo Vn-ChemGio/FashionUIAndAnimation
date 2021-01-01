@@ -1,15 +1,18 @@
 import React, {useRef}            from 'react'
 import {TextInput as RNTextInput} from 'react-native'
 
-import {Container, Button, Text, Box}               from '../components'
-import TextInput                                    from '../components/Form/TextInput';
-import CheckBox                                     from '../components/Form/CheckBox';
-import {useFormik}                                  from 'formik';
-import * as Yup                                     from 'yup';
-import Footer                                       from '../../layouts/Footer';
-import {BorderlessButton}                           from 'react-native-gesture-handler';
-import {AuthenticationRoutes, StackNavigationProps} from "../navigators";
+import {Container, Button, Text, Box} from '../components'
+import TextInput                      from '../components/Form/TextInput';
+import CheckBox                       from '../components/Form/CheckBox';
+import {useFormik}                    from 'formik';
+import * as Yup                       from 'yup';
+import Footer                         from '../../layouts/Footer';
+import {BorderlessButton}             from 'react-native-gesture-handler';
 
+import {DrawerNavigationProp}             from "@react-navigation/drawer";
+import {StackNavigationProp}              from "@react-navigation/stack";
+import {CompositeNavigationProp}          from "@react-navigation/native";
+import {AuthenticationRoutes, HomeRoutes} from "../navigators";
 
 const LoginSchema = Yup.object().shape({
     password: Yup.string()
@@ -21,7 +24,12 @@ const LoginSchema = Yup.object().shape({
         .required('Required'),
 });
 
-const Login = ({navigation}: StackNavigationProps<AuthenticationRoutes, "Login">) => {
+
+interface LoginProps {
+    navigation: CompositeNavigationProp<StackNavigationProp<AuthenticationRoutes, "Login">, DrawerNavigationProp<HomeRoutes, "Home">>
+}
+
+const Login = ({navigation}: LoginProps) => {
     const footer      = (
         <Footer
             title="Don't have an account?"
@@ -41,7 +49,7 @@ const Login = ({navigation}: StackNavigationProps<AuthenticationRoutes, "Login">
           }           = useFormik({
         initialValues   : {email: '', password: '', remember: true},
         validationSchema: LoginSchema,
-        onSubmit        : (values) => console.log(values)
+        onSubmit        : () => navigation.navigate("Home")
     });
 
     return (

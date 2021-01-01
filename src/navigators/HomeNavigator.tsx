@@ -2,7 +2,6 @@ import React                   from 'react';
 import {createDrawerNavigator} from "@react-navigation/drawer";
 
 import {
-    Button,
     View
 } from "react-native";
 
@@ -24,20 +23,16 @@ const HomeNavigator = () => {
 };
 
 
-function HomeScreen({ navigation }) {
+function HomeScreen() {
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Button
-                onPress={() => navigation.navigate('Notifications')}
-                title="Go to notifications"
-            />
+
         </View>
     );
 }
-function NotificationsScreen({ navigation }) {
+function NotificationsScreen() {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Button onPress={() => navigation.goBack()} title="Go back home" />
+        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:"red"}}>
         </View>
     );
 }
