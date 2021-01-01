@@ -9,10 +9,7 @@ import * as Yup                       from 'yup';
 import Footer                         from '../../layouts/Footer';
 import {BorderlessButton}             from 'react-native-gesture-handler';
 
-import {DrawerNavigationProp}             from "@react-navigation/drawer";
-import {StackNavigationProp}              from "@react-navigation/stack";
-import {CompositeNavigationProp}          from "@react-navigation/native";
-import {AuthenticationRoutes, HomeRoutes} from "../navigators";
+import {AuthenticationProps} from "../navigators";
 
 const LoginSchema = Yup.object().shape({
     password: Yup.string()
@@ -25,11 +22,7 @@ const LoginSchema = Yup.object().shape({
 });
 
 
-interface LoginProps {
-    navigation: CompositeNavigationProp<StackNavigationProp<AuthenticationRoutes, "Login">, DrawerNavigationProp<HomeRoutes, "Home">>
-}
-
-const Login = ({navigation}: LoginProps) => {
+const Login = ({navigation}: AuthenticationProps<"Login">) => {
     const footer      = (
         <Footer
             title="Don't have an account?"

@@ -6,7 +6,7 @@ import Animated, {divide, Extrapolate, interpolate, multiply} from 'react-native
 import {interpolateColor, useScrollHandler}                   from "react-native-redash/lib/module/v1";
 import SubSlide                                               from "./SubSlide";
 import Dot                                                    from "./Dot";
-import {AuthenticationRoutes, StackNavigationProps}           from "../../navigators";
+import {AuthenticationProps}                                  from "../../navigators";
 
 const slides     = [
     {
@@ -56,7 +56,7 @@ const slides     = [
         }
     },
 ]
-const OnBoarding = ({navigation}: StackNavigationProps<AuthenticationRoutes, "OnBoarding">) => {
+const OnBoarding = ({navigation}: AuthenticationProps<"OnBoarding">) => {
     const scroll             = useRef<Animated.ScrollView>(null)
     const {scrollHandler, x} = useScrollHandler()
 

@@ -1,5 +1,5 @@
-import React                  from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import React                                       from 'react';
+import {createStackNavigator, StackNavigationProp} from '@react-navigation/stack';
 import {
     OnBoarding,
     Welcome,
@@ -7,7 +7,10 @@ import {
     SignUp,
     PasswordChanged,
     ForgotPassword
-}               from "../Authentication";
+}                                                  from "../Authentication";
+import {CompositeNavigationProp, RouteProp}        from "@react-navigation/native";
+import {DrawerNavigationProp}                      from "@react-navigation/drawer";
+import {HomeRoutes}                                from "./HomeNavigator";
 
 
 export type AuthenticationRoutes = {
@@ -34,5 +37,11 @@ const AuthenticationNavigator = () => {
         </AuthenticationStack.Navigator>
     );
 };
+
+export interface AuthenticationProps<RouteName extends keyof AuthenticationRoutes> {
+    navigation: CompositeNavigationProp<StackNavigationProp<AuthenticationRoutes, RouteName>,
+        DrawerNavigationProp<HomeRoutes, "Home">>,
+    route: RouteProp<AuthenticationRoutes, RouteName>;
+}
 
 export default AuthenticationNavigator;

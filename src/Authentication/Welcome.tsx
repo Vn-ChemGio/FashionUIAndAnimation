@@ -1,10 +1,10 @@
 import React from 'react';
 
-import {Box, Button, Text,}                         from "../components";
-import {Image}                                      from "react-native";
-import {SCREEN_WIDTH, SPLASH_SCREEN_BORDER_RADIUS}  from "../../Constants";
-import {BorderlessButton}                           from "react-native-gesture-handler";
-import {AuthenticationRoutes, StackNavigationProps} from "../navigators";
+import {Box, Button, Text,}                        from "../components";
+import {Image}                                     from "react-native";
+import {SCREEN_WIDTH, SPLASH_SCREEN_BORDER_RADIUS} from "../../Constants";
+import {BorderlessButton}                          from "react-native-gesture-handler";
+import {AuthenticationProps}                       from "../navigators";
 
 
 const picture    = {
@@ -12,7 +12,7 @@ const picture    = {
     width : 1080,
     height: 1440
 }
-const OnBoarding = ({navigation}: StackNavigationProps<AuthenticationRoutes, "Welcome">) => {
+const OnBoarding = ({navigation}: AuthenticationProps<"Welcome">) => {
 
     return (
         <Box flex={1} backgroundColor="white">

@@ -1,10 +1,10 @@
 import React                                                          from 'react'
-import {StackNavigationProps, AuthenticationRoutes}                   from '../navigators';
+import {AuthenticationProps}                                          from '../navigators';
 import {Container, Button, Text, Box, RoundedIconButton, RoundedIcon} from '../components'
 
 const SIZE = 70;
 
-const PasswordChanged = ({navigation}: StackNavigationProps<AuthenticationRoutes, "PasswordChanged">) => {
+const PasswordChanged = ({navigation}: AuthenticationProps<"PasswordChanged">) => {
 
     const footer = (
         <Box flexDirection="row" justifyContent="center">

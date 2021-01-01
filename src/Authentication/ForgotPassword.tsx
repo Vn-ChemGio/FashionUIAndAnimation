@@ -1,11 +1,11 @@
-import React                                        from 'react'
-import {Linking}                                    from 'react-native'
-import {Container, Button, Text, Box}               from '../components'
-import TextInput                                    from '../components/Form/TextInput';
-import {useFormik}                                  from 'formik';
-import * as Yup                                     from 'yup';
-import Footer                                       from '../../layouts/Footer';
-import {AuthenticationRoutes, StackNavigationProps} from "../navigators";
+import React                          from 'react'
+import {Linking}                      from 'react-native'
+import {Container, Button, Text, Box} from '../components'
+import TextInput                      from '../components/Form/TextInput';
+import {useFormik}                    from 'formik';
+import * as Yup                       from 'yup';
+import Footer                         from '../../layouts/Footer';
+import {AuthenticationProps}          from "../navigators";
 
 const ForgotPasswordSchema = Yup.object().shape({
     email: Yup.string()
@@ -13,7 +13,7 @@ const ForgotPasswordSchema = Yup.object().shape({
         .required('Required'),
 });
 
-const ForgotPassword = ({navigation}: StackNavigationProps<AuthenticationRoutes, "ForgotPassword">) => {
+const ForgotPassword = ({navigation}: AuthenticationProps<"ForgotPassword">) => {
     const footer = (
         <Footer
             title="Don't work?"
