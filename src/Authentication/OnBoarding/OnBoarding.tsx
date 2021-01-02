@@ -8,7 +8,7 @@ import SubSlide                                               from "./SubSlide";
 import Dot                                                    from "./Dot";
 import {AuthenticationProps}                                  from "../../navigators";
 
-const slides     = [
+export  const slides     = [
     {
         title      : "Relaxed",
         subTitle   : "Find Our Outfits",

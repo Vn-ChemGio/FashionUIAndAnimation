@@ -7,7 +7,7 @@ import {BorderlessButton}                          from "react-native-gesture-ha
 import {AuthenticationProps}                       from "../navigators";
 
 
-const picture    = {
+export  const picture    = {
     src   : require('./OnBoarding/ImageSlider/5.png'),
     width : 1080,
     height: 1440

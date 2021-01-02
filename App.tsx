@@ -11,10 +11,14 @@ const fonts = {
     "SFProText-Regular" : require("./assets/fonts/SF-Pro-Text-Regular.otf"),
 };
 
+import {assets as homeAssets} from './src/App/Drawer';
+import {assets as authenticationAssets} from './src/Authentication';
+
+const assets = [...homeAssets, ...authenticationAssets]
 export default function App() {
     return (
         <ThemeProvider {...{theme}}>
-            <LoadAssets {...{fonts}}>
+            <LoadAssets {...{fonts, assets}}>
                 <AppNavigator/>
             </LoadAssets>
         </ThemeProvider>

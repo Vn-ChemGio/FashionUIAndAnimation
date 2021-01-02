@@ -10,7 +10,7 @@ import DrawerItem, {DrawerItemProps} from "./DrawerItem";
 const aspectRatio = 750 / 1125;
 const height = DRAWER_WIDTH * aspectRatio;
 
-const assets = [require("../../../assets/drawer.png")];
+export  const assets = [require("../../../assets/drawer.png")];
 
 const items: DrawerItemProps[] = [
     {
