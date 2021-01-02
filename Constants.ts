@@ -4,6 +4,8 @@ const {width, height} = Dimensions.get("window");
 
 export const SCREEN_WIDTH  = width;
 export const SCREEN_HEIGHT = height;
+export const DRAWER_WIDTH = SCREEN_WIDTH * 0.75;
+
 
 export const TEXT_INPUT_HEIGHT = height * 0.2;
 export const FOOTER_HEIGHT     = 70;

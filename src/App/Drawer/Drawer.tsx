@@ -2,14 +2,61 @@ import React from "react";
 
 import {Image, View}                                       from "react-native";
 import {DrawerContentComponentProps, DrawerContentOptions} from "@react-navigation/drawer";
-import {Box, Text, Theme}                                         from "../../../Theme";
+import {Box, Text, Theme}                                  from "../../../Theme";
 import Header                                              from "../../../layouts/Header";
-import {SCREEN_WIDTH}                                      from "../../../Constants";
-export const DRAWER_WIDTH = SCREEN_WIDTH * 0.75;
+import {DRAWER_WIDTH, SCREEN_WIDTH}                        from "../../../Constants";
+import DrawerItem                                          from "./DrawerItem";
+
 const aspectRatio = 750 / 1125;
 const height = DRAWER_WIDTH * aspectRatio;
 
 const assets = [require("../../../assets/drawer.png")];
+
+const items: DrawerItemProps[] = [
+    {
+        icon: "zap",
+        label: "Outfit Ideas",
+        screen: "OutfitIdeas",
+        color: "primary",
+    },
+    {
+        icon: "heart",
+        label: "Favorite Outfits",
+        screen: "FavoriteOutfits",
+        color: "drawer1",
+    },
+    {
+        icon: "user",
+        label: "Edit Profile",
+        screen: "EditProfile",
+        color: "drawer2",
+    },
+    {
+        icon: "clock",
+        label: "Transaction History",
+        screen: "TransactionHistory",
+        color: "drawer3",
+    },
+    {
+        icon: "settings",
+        label: "Notification Settings",
+        screen: "Settings",
+        color: "drawer4",
+    },
+    {
+        icon: "log-out",
+        label: "Logout",
+        onPress: (navigation) =>
+            navigation.dispatch(
+                CommonActions.reset({
+                    index: 0,
+                    routes: [{ name: "Authentication" }],
+                })
+            ),
+        color: "secondary",
+    },
+];
+
 const Drawer = () =>{
 
     return (
@@ -71,6 +118,9 @@ const Drawer = () =>{
                             mikepeter@gmail.com
                         </Text>
                     </Box>
+                    {items.map((item) => (
+                        <DrawerItem key={item.icon} {...item} />
+                    ))}
 
                 </Box>
             </Box>

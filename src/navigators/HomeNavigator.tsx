@@ -3,6 +3,7 @@ import {createDrawerNavigator, DrawerNavigationProp} from "@react-navigation/dra
 import {View}                                        from "react-native";
 import DrawerContent                                 from "../App/Drawer/Drawer";
 import {RouteProp}                                   from "@react-navigation/native";
+import {DRAWER_WIDTH}                                from "../../Constants";
 
 const AppDrawer = createDrawerNavigator<HomeRoutes>();
 
@@ -14,7 +15,7 @@ export type HomeRoutes = {
 
 const HomeNavigator = () => {
     return (
-        <AppDrawer.Navigator drawerContent={DrawerContent}>
+        <AppDrawer.Navigator drawerContent={DrawerContent} drawerStyle={{width:DRAWER_WIDTH}}>
             <AppDrawer.Screen name="Home" component={HomeScreen}/>
             <AppDrawer.Screen name="Notifications" component={NotificationsScreen}/>
         </AppDrawer.Navigator>
