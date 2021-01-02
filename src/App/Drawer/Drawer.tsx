@@ -1,11 +1,11 @@
 import React from "react";
 
 import {Image, View}                                       from "react-native";
-import {DrawerContentComponentProps, DrawerContentOptions} from "@react-navigation/drawer";
+    import {DrawerContentComponentProps, DrawerContentOptions} from "@react-navigation/drawer";
 import {Box, Text, Theme}                                  from "../../../Theme";
 import Header                                              from "../../../layouts/Header";
-import {DRAWER_WIDTH, SCREEN_WIDTH}                        from "../../../Constants";
-import DrawerItem                                          from "./DrawerItem";
+import {DRAWER_WIDTH}  from "../../../Constants";
+import DrawerItem, {DrawerItemProps} from "./DrawerItem";
 
 const aspectRatio = 750 / 1125;
 const height = DRAWER_WIDTH * aspectRatio;
@@ -110,8 +110,8 @@ const Drawer = () =>{
                         height={100}
                         style={{ borderRadius: 50 }}
                     />
-                    <Box marginVertical="m">
-                        <Text variant="lTitle" textAlign="center">
+                    <Box marginVertical="m" marginTop="xl">
+                        <Text variant="title" textAlign="center">
                             Mike Peter
                         </Text>
                         <Text variant="body" textAlign="center">
