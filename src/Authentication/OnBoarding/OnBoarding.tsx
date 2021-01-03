@@ -16,7 +16,7 @@ export  const slides     = [
    Find the best outfit here!`,
         color      : "#BFEAF5",
         picture    : {
-            src   : require('./ImageSlider/1.png'),
+            src   : require('../../../assets/ImageSlider/1.png'),
             width : 1080,
             height: 1440
         }
@@ -28,7 +28,7 @@ export  const slides     = [
     Explore hundreds of outfit ideas`,
         color      : "#BEECC4",
         picture    : {
-            src   : require('./ImageSlider/2.png'),
+            src   : require('../../../assets/ImageSlider/2.png'),
             width : 1080,
             height: 1440
         }
@@ -39,7 +39,7 @@ export  const slides     = [
         description: "Create your individual & unique style and look amazing everyday",
         color      : "#FFE4D9",
         picture    : {
-            src   : require('./ImageSlider/3.png'),
+            src   : require('../../../assets/ImageSlider/3.png'),
             width : 1080,
             height: 1440
         }
@@ -50,7 +50,7 @@ export  const slides     = [
         description: "Discover the latest trends in fashion and explore your personality",
         color      : "#FFDDDD",
         picture    : {
-            src   : require('./ImageSlider/4.png'),
+            src   : require('../../../assets/ImageSlider/4.png'),
             width : 1080,
             height: 1440
         }

@@ -11,19 +11,19 @@ import Card                  from "./Card";
 const cards = [
     {
         index: 3,
-        source: require("../../Authentication/Onboarding/assets/4.png"),
+        source: require("../../../assets/ImageSlider/4.png"),
     },
     {
         index: 2,
-        source: require("../../Authentication/Onboarding/assets/3.png"),
+        source: require("../../../assets/ImageSlider/3.png"),
     },
     {
         index: 1,
-        source: require("../../Authentication/Onboarding/assets/2.png"),
+        source: require("../../../assets/ImageSlider/2.png"),
     },
     {
         index: 0,
-        source: require("../../Authentication/Onboarding/assets/1.png"),
+        source: require("../../../assets/ImageSlider/1.png"),
     },
 ];
 const step = 1 / (cards.length - 1);

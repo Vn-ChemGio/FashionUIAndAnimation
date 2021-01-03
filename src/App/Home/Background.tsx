@@ -4,6 +4,7 @@ import { View, StyleSheet, Image } from "react-native";
 import {Box, Theme, palette} from "../../../Theme";
 import {useTheme}  from "@shopify/restyle";
 
+export  const assets = [require("./assets/background.png")]
 const Background = () => {
     const theme = useTheme<Theme>();
     return (
@@ -19,7 +20,7 @@ const Background = () => {
                 <Box flex={1} backgroundColor="background" />
                 <Box flex={1} backgroundColor="secondary" />
                 <Image
-                    source={require("./assets/background.png")}
+                    source={assets[0]}
                     style={{
                         ...StyleSheet.absoluteFillObject,
                         width: undefined,

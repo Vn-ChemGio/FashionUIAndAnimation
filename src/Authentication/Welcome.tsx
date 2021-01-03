@@ -8,7 +8,7 @@ import {AuthenticationProps}                       from "../navigators";
 
 
 export  const picture    = {
-    src   : require('./OnBoarding/ImageSlider/5.png'),
+    src   : require('../../assets/ImageSlider/5.png'),
     width : 1080,
     height: 1440
 }

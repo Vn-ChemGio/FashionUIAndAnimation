@@ -59,7 +59,6 @@ const items: DrawerItemProps[] = [
 ];
 
 const Drawer = () => {
-    const navigation = useNavigation();
     return (
         <Box flex={1}>
             <Box flex={0.2} backgroundColor="white">
