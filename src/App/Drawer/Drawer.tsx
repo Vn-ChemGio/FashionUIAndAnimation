@@ -1,64 +1,65 @@
 import React from "react";
 
-import {Image, View}                                       from "react-native";
-    import {DrawerContentComponentProps, DrawerContentOptions} from "@react-navigation/drawer";
-import {Box, Text, Theme}                                  from "../../../Theme";
-import Header                                              from "../../../layouts/Header";
-import {DRAWER_WIDTH}  from "../../../Constants";
-import DrawerItem, {DrawerItemProps} from "./DrawerItem";
+import {Image} from "react-native";
+
+import {Box, Text}                                   from "../../../Theme";
+import Header                                        from "../../../layouts/Header";
+import {DRAWER_WIDTH}                                from "../../../Constants";
+import DrawerItem, {DrawerItemProps}                 from "./DrawerItem";
+import {useNavigation, DrawerActions, CommonActions} from "@react-navigation/native";
 
 const aspectRatio = 750 / 1125;
-const height = DRAWER_WIDTH * aspectRatio;
+const height      = DRAWER_WIDTH * aspectRatio;
 
-export  const assets = [require("../../../assets/drawer.png")];
+export const assets = [require("../../../assets/drawer.png")];
 
 const items: DrawerItemProps[] = [
     {
-        icon: "zap",
-        label: "Outfit Ideas",
+        icon  : "zap",
+        label : "Outfit Ideas",
         screen: "OutfitIdeas",
-        color: "primary",
+        color : "primary",
     },
     {
-        icon: "heart",
-        label: "Favorite Outfits",
+        icon  : "heart",
+        label : "Favorite Outfits",
         screen: "FavoriteOutfits",
-        color: "drawer1",
+        color : "drawer1",
     },
     {
-        icon: "user",
-        label: "Edit Profile",
+        icon  : "user",
+        label : "Edit Profile",
         screen: "EditProfile",
-        color: "drawer2",
+        color : "drawer2",
     },
     {
-        icon: "clock",
-        label: "Transaction History",
+        icon  : "clock",
+        label : "Transaction History",
         screen: "TransactionHistory",
-        color: "drawer3",
+        color : "drawer3",
     },
     {
-        icon: "settings",
-        label: "Notification Settings",
+        icon  : "settings",
+        label : "Notification Settings",
         screen: "Settings",
-        color: "drawer4",
+        color : "drawer4",
     },
     {
-        icon: "log-out",
-        label: "Logout",
+        icon   : "log-out",
+        label  : "Logout",
         onPress: (navigation) =>
             navigation.dispatch(
                 CommonActions.reset({
-                    index: 0,
-                    routes: [{ name: "Authentication" }],
+                    index : 0,
+                    routes: [{name: "Authentication"}],
                 })
             ),
-        color: "secondary",
+        color  : "secondary",
     },
 ];
 
-const Drawer = () =>{
-
+const Drawer = () => {
+    const navigation = useNavigation();
     return (
         <Box flex={1}>
             <Box flex={0.2} backgroundColor="white">
@@ -75,8 +76,7 @@ const Drawer = () =>{
                         title="Menu"
                         left={{
                             icon   : "x",
-                            onPress: () => {
-                            },
+                            onPress: () => navigation.dispatch(DrawerActions.closeDrawer),
                         }}
                         right={{
                             icon   : "shopping-bag",
@@ -88,7 +88,7 @@ const Drawer = () =>{
                 </Box>
             </Box>
             <Box flex={0.8}>
-                <Box flex={1} backgroundColor="secondary" />
+                <Box flex={1} backgroundColor="secondary"/>
                 <Box
                     position="absolute"
                     top={0}
@@ -108,7 +108,7 @@ const Drawer = () =>{
                         backgroundColor="primary"
                         width={100}
                         height={100}
-                        style={{ borderRadius: 50 }}
+                        style={{borderRadius: 50}}
                     />
                     <Box marginVertical="m" marginTop="xl">
                         <Text variant="title" textAlign="center">
@@ -134,7 +134,7 @@ const Drawer = () =>{
                 <Image
                     source={assets[0]}
                     style={{
-                        width: DRAWER_WIDTH,
+                        width              : DRAWER_WIDTH,
                         height,
                         borderTopLeftRadius: 75,
                     }}
