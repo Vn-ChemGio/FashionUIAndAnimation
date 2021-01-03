@@ -17,7 +17,7 @@ export type AuthenticationRoutes = {
     OnBoarding: undefined;
     Welcome: undefined;
     Login: undefined,
-    SignUp:undefined,
+    SignUp: undefined,
     ForgotPassword: undefined,
     PasswordChanged: undefined
 }

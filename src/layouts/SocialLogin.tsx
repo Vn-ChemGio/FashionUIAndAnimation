@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react'
 import Svg, {Path}        from 'react-native-svg'
-import {Box}              from '../components';
+import {Box}              from './createStyle';
 import {userTheme}        from "./index";
 
 

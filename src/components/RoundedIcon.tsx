@@ -1,8 +1,7 @@
 import React              from 'react'
 import {Feather as Icon}  from '@expo/vector-icons'
 
-import {Box, Text} from '.';
-import {Theme}     from "../layouts";
+import {Box, Text, Theme} from '../layouts';
 
 export interface RoundedIconProps {
     name: string;

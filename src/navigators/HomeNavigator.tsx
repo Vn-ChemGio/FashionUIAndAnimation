@@ -1,10 +1,11 @@
 import React                                         from 'react';
-import {createDrawerNavigator, DrawerNavigationProp} from "@react-navigation/drawer";
 import {View}                                        from "react-native";
-import DrawerContent                                 from "../App/Drawer/Drawer";
 import {RouteProp}                                   from "@react-navigation/native";
+import {createDrawerNavigator, DrawerNavigationProp} from "@react-navigation/drawer";
+
 import {DRAWER_WIDTH}                                from "../../Constants";
 import {Home}                                        from "../App/Home";
+import DrawerContent                                 from "../App/Drawer/Drawer";
 
 const AppDrawer = createDrawerNavigator<HomeRoutes>();
 
@@ -22,15 +23,6 @@ const HomeNavigator = () => {
         </AppDrawer.Navigator>
     );
 };
-
-
-function HomeScreen() {
-    return (
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-
-        </View>
-    );
-}
 
 function NotificationsScreen() {
     return (

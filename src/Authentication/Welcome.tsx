@@ -1,18 +1,18 @@
-import React from 'react';
+import React              from 'react';
+import {Image}            from "react-native";
+import {BorderlessButton} from "react-native-gesture-handler";
 
-import {Box, Button, Text,}                        from "../components";
-import {Image}                                     from "react-native";
-import {SCREEN_WIDTH, SPLASH_SCREEN_BORDER_RADIUS} from "../../Constants";
-import {BorderlessButton}                          from "react-native-gesture-handler";
+import {Button}                                    from "../components";
+import {Box, Text}                                 from "../layouts";
 import {AuthenticationProps}                       from "../navigators";
+import {SCREEN_WIDTH, SPLASH_SCREEN_BORDER_RADIUS} from "../../Constants";
 
-
-export  const picture    = {
+export const picture = {
     src   : require('../../assets/ImageSlider/5.png'),
     width : 1080,
     height: 1440
 }
-const OnBoarding = ({navigation}: AuthenticationProps<"Welcome">) => {
+const OnBoarding     = ({navigation}: AuthenticationProps<"Welcome">) => {
 
     return (
         <Box flex={1} backgroundColor="white">

@@ -2,8 +2,7 @@ import React        from 'react';
 import {StyleSheet} from 'react-native';
 import {RectButton} from "react-native-gesture-handler";
 
-import {userTheme} from "../layouts";
-import {Text}      from '.'
+import {userTheme, Text} from "../layouts";
 
 interface ButtonProps {
     variant: "default" | "primary",

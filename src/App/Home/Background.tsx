@@ -1,8 +1,7 @@
 import React                     from "react";
 import {View, StyleSheet, Image} from "react-native";
 
-import {palette, userTheme} from "../../layouts";
-import {Box}                from "../../components";
+import {palette, userTheme, Box} from "../../layouts";
 
 export const assets = [require("./assets/background.png")]
 const Background    = () => {

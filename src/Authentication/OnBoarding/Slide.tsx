@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
 import {SCREEN_HEIGHT, SCREEN_WIDTH} from "../../../Constants";
-import {Text} from '../../components'
+import {Text} from '../../layouts'
 
 interface SlideProps {
     title: string;

@@ -3,8 +3,7 @@ import {Image} from "react-native";
 
 import {DrawerActions, CommonActions, useNavigation} from "@react-navigation/native";
 
-import {Box, Text}                   from "../../components";
-import Header                        from "../../layouts/Header";
+import {Header, Text, Box}           from "../../layouts";
 import {DRAWER_WIDTH}                from "../../../Constants";
 import DrawerItem, {DrawerItemProps} from "./DrawerItem";
 
@@ -60,7 +59,7 @@ const items: DrawerItemProps[] = [
 ];
 
 const Drawer = () => {
-    const navigation = useNavigation();
+    //const navigation = useNavigation();
     return (
         <Box flex={1}>
             <Box flex={0.2} backgroundColor="white">
@@ -77,7 +76,7 @@ const Drawer = () => {
                         title="Menu"
                         left={{
                             icon   : "x",
-                            onPress: () => navigation.dispatch(DrawerActions.closeDrawer),
+                            onPress: () =>true // navigation.dispatch(DrawerActions.closeDrawer),
                         }}
                         right={{
                             icon   : "shopping-bag",

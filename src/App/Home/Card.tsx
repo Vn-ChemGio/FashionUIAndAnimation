@@ -8,10 +8,7 @@ import Animated, {
 } from "react-native-reanimated";
 import {mix, mixColor, usePanGestureHandler} from "react-native-redash/lib/module/v1";
 
-import {Box} from '../../components'
-
-
-
+import {Box} from '../../layouts'
 import { useSpring } from "./Animations";
 
 const { width: wWidth } = Dimensions.get("window");

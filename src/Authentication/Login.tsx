@@ -1,13 +1,12 @@
 import React, {useRef}            from 'react'
 import {TextInput as RNTextInput} from 'react-native'
+import {BorderlessButton}         from 'react-native-gesture-handler';
 
-import {Container, Button, Text, Box} from '../components'
-import TextInput                      from '../components/Form/TextInput';
-import CheckBox                       from '../components/Form/CheckBox';
-import {useFormik}                    from 'formik';
-import * as Yup                       from 'yup';
-import Footer                         from '../../layouts/Footer';
-import {BorderlessButton}             from 'react-native-gesture-handler';
+import {useFormik} from 'formik';
+import * as Yup    from 'yup';
+
+import {Container, Button, TextInput, CheckBox} from '../components'
+import {Footer, Text, Box}                      from '../layouts';
 
 import {AuthenticationProps} from "../navigators";
 

@@ -3,9 +3,9 @@ import {useNavigation}        from "@react-navigation/native";
 import React                  from "react";
 import {RectButton}           from "react-native-gesture-handler";
 
-import {userTheme, Theme}       from "../../layouts";
-import {HomeRoutes}             from "../../navigators";
-import {RoundedIcon, Box, Text} from "../../components";
+import {userTheme, Theme, Box, Text} from "../../layouts";
+import {HomeRoutes}                  from "../../navigators";
+import {RoundedIcon}                 from "../../components";
 
 
 interface BaseDrawerItem {

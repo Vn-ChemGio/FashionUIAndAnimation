@@ -1,10 +1,8 @@
 import React              from 'react'
-import {
-    Text,
-    Box
-} from '..';
 import {Feather as Icon}  from '@expo/vector-icons'
 import {BorderlessButton} from 'react-native-gesture-handler';
+
+import {Text, Box} from '../../layouts';
 
 interface CheckBoxProps {
     label: string;

@@ -4,14 +4,15 @@ import {Image, Dimensions, StyleSheet, Platform} from 'react-native'
 import {useSafeAreaInsets}       from 'react-native-safe-area-context';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Constants                 from "expo-constants";
-import {userTheme}               from "../layouts";
-import {Box}                     from '.'
+
+import {userTheme, Box}          from "../layouts";
 
 export const assets            = [
     require('./assets/patterns/1.jpg'),
     require('./assets/patterns/2.png'),
     require('./assets/patterns/3.png'),
 ] as const;
+
 const {width, height: wHeight} = Dimensions.get('window');
 const aspectRatio              = 391 / 626;
 const height                   = width * aspectRatio;

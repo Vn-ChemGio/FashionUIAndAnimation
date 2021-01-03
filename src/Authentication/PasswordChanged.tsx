@@ -1,6 +1,7 @@
-import React                                                          from 'react'
-import {AuthenticationProps}                                          from '../navigators';
-import {Container, Button, Text, Box, RoundedIconButton, RoundedIcon} from '../components'
+import React                            from 'react'
+import {AuthenticationProps}            from '../navigators';
+import {Container, Button,RoundedIconButton, RoundedIcon}   from '../components'
+import { Text, Box} from '../layouts'
 
 const SIZE = 70;
 
