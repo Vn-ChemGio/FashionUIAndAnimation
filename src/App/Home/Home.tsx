@@ -9,6 +9,7 @@ import {Header}              from "../../components";
 
 import Card       from "./Card";
 import Background from "./Background";
+import Categories from "./Categories";
 
 const cards = [
     {
@@ -44,6 +45,8 @@ const Home = ({navigation}: HomeNavigationProps<"Home">) => {
                 right={{icon: 'shopping-bag', onPress: () => true}}
                 title="Home"
             />
+
+            <Categories />
 
             <Box flex={1}>
                 <Background/>
