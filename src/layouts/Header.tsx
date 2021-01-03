@@ -1,7 +1,7 @@
 import React               from "react";
 import {useSafeAreaInsets} from "react-native-safe-area-context";
 
-import {RoundedIconButton, Box, Text} from "../src/components";
+import {RoundedIconButton, Box, Text} from "../components";
 import {View}                         from "react-native";
 
 interface HeaderProps {

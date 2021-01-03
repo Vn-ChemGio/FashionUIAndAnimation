@@ -1,6 +1,4 @@
-import {BaseTheme, createBox, createText, createTheme} from '@shopify/restyle'
-
-const palette = {
+export const palette = {
     purpleLight: '#8C6FF7',
     purplePrimary: '#5A31F4',
     purpleDark: '#3F22AB',
@@ -23,11 +21,11 @@ const palette = {
     yellow: "#FFC641",
     pink: "#FF87A2",
     violet: "#442CB9",
-    lightBlue: "#BFEAF5",
+    lightBlue: "#BFEAF5"
 };
 
 
-const theme: BaseTheme = createTheme({
+const theme = {
     colors: {
         mainBackground       : palette.white,
         cardPrimaryBackground: palette.purplePrimary,
@@ -110,12 +108,7 @@ const theme: BaseTheme = createTheme({
             color: "secondary",
         },
     },
-
-});
+};
 
 export type Theme = typeof theme;
 export default theme;
-
-export const Text = createText<Theme>();
-export const Box = createBox<Theme>();
-

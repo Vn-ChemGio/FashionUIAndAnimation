@@ -1,7 +1,8 @@
 import React from 'react'
 import SocialLogin from './SocialLogin'
-import { Text, Box } from '../Theme'
+
 import { BorderlessButton } from 'react-native-gesture-handler'
+import {Box, Text}                from "../components";
 
 interface FooterProps {
     onPress: () => void;

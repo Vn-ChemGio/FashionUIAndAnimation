@@ -28,6 +28,7 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": ""
+    "description": "Fashion template test",
+    "githubUrl": "https://github.com/Vn-ChemGio/FashionUIAndAnimation"
   }
 }
