@@ -5,8 +5,8 @@ import {BorderlessButton}         from 'react-native-gesture-handler';
 import {useFormik} from 'formik';
 import * as Yup    from 'yup';
 
-import {Container, Button, TextInput, CheckBox} from '../components'
-import {Footer, Text, Box}                      from '../layouts';
+import {Container, Button, TextInput, CheckBox, Footer} from '../components'
+import {Text, Box}                      from '../layouts';
 
 import {AuthenticationProps} from "../navigators";
 

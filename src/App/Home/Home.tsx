@@ -4,7 +4,8 @@ import {useTransition} from "react-native-redash/lib/module/v1";
 import {sub}           from "react-native-reanimated";
 
 import {HomeNavigationProps} from "../../navigators";
-import {Box, Header}         from "../../layouts";
+import {Box}                 from "../../layouts";
+import {Header}              from "../../components";
 
 import Card       from "./Card";
 import Background from "./Background";

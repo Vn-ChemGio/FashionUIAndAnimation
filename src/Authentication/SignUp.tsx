@@ -3,9 +3,9 @@ import * as Yup                   from 'yup';
 import {TextInput as RNTextInput} from 'react-native'
 import {useFormik}                from 'formik'
 
-import {Container, Button, TextInput} from '../components';
-import {Footer, Box, Text}            from '../layouts';
-import {AuthenticationProps}          from '../navigators'
+import {Container, Button, TextInput, Footer} from '../components';
+import {Box, Text}                            from '../layouts';
+import {AuthenticationProps}                  from '../navigators'
 
 
 const SignUpSchema = Yup.object().shape({

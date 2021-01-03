@@ -1,10 +1,13 @@
-import {useTheme as useReTheme} from "@shopify/restyle";
-import theme, {Theme}           from "./Theme";
+import {createBox, createText, useTheme as useReTheme} from "@shopify/restyle";
+import {Theme}                                         from "./Theme";
 
-export *                   from './Theme';
-export *                   from './createStyle';
-export {default as Header} from './Header';
-export {default as Footer} from './Footer';
+export * from './Theme';
 
+export const Text      = createText<Theme>();
+export const Box       = createBox<Theme>();
 export const userTheme = () => useReTheme<Theme>();
+
+import theme from "./Theme";
+
+
 export default theme;

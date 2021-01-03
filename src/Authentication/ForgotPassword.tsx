@@ -3,9 +3,9 @@ import {Linking}   from 'react-native'
 import {useFormik} from 'formik';
 import * as Yup    from 'yup';
 
-import {Footer, Text, Box}            from '../layouts';
-import {AuthenticationProps}          from "../navigators";
-import {Container, Button, TextInput} from '../components'
+import {Text, Box}                            from '../layouts';
+import {AuthenticationProps}                  from "../navigators";
+import {Container, Button, TextInput, Footer} from '../components'
 
 const ForgotPasswordSchema = Yup.object().shape({
     email: Yup.string()
