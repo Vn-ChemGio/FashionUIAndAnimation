@@ -1,18 +1,11 @@
-import React, {ReactNode}        from 'react'
-import {
-    Image,
-    Dimensions,
-    StyleSheet,
-    Platform
-}                                from 'react-native'
-import {
-    Box,
-    Theme
-}                                from '../../Theme'
+import React, {ReactNode}                        from 'react'
+import {Image, Dimensions, StyleSheet, Platform} from 'react-native'
+
 import {useSafeAreaInsets}       from 'react-native-safe-area-context';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Constants                 from "expo-constants";
-import {useTheme}                from "@shopify/restyle";
+import {userTheme}               from "../layouts";
+import {Box}                     from '.'
 
 export const assets            = [
     require('./assets/patterns/1.jpg'),
@@ -33,7 +26,7 @@ interface ContainerProps {
 const Container = ({children, footer, pattren}: ContainerProps) => {
 
     const insets = useSafeAreaInsets();
-    const theme  = useTheme<Theme>();
+    const theme  = userTheme();
     const asset  = assets[pattren];
 
     return (
@@ -71,7 +64,7 @@ const Container = ({children, footer, pattren}: ContainerProps) => {
                         flex={1}
                         borderRadius="xl"
                         backgroundColor="white"
-                        borderTopLeftRadius={0}
+                        borderTopLeftRadius="n"
                         justifyContent="center"
                         padding="xl"
                     >

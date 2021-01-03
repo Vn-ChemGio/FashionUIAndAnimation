@@ -60,6 +60,7 @@ const theme = {
         xl: 40,
     },
     borderRadii:{
+        n:0,
         s: 4,
         m: 10,
         l: 25,

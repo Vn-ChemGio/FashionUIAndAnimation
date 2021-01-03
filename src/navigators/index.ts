@@ -1,5 +1,5 @@
 export {default as AuthenticationNavigator, AuthenticationRoutes, AuthenticationProps} from './AuthenticationNavigator';
-export {default as HomeNavigator, HomeRoutes}                     from './HomeNavigator';
+export {default as HomeNavigator, HomeRoutes, HomeNavigationProps}                     from './HomeNavigator';
 
 
 

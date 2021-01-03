@@ -1,12 +1,13 @@
-import React from "react";
-
+import React   from "react";
 import {Image} from "react-native";
 
-import {Box, Text}                                   from "../../../Theme";
-import Header                                        from "../../../layouts/Header";
-import {DRAWER_WIDTH}                                from "../../../Constants";
-import DrawerItem, {DrawerItemProps}                 from "./DrawerItem";
-import {useNavigation, DrawerActions, CommonActions} from "@react-navigation/native";
+import {DrawerActions, CommonActions, useNavigation} from "@react-navigation/native";
+
+import {Box, Text}                   from "../../components";
+import Header                        from "../../layouts/Header";
+import {DRAWER_WIDTH}                from "../../../Constants";
+import DrawerItem, {DrawerItemProps} from "./DrawerItem";
+
 
 const aspectRatio = 750 / 1125;
 const height      = DRAWER_WIDTH * aspectRatio;
@@ -17,7 +18,7 @@ const items: DrawerItemProps[] = [
     {
         icon  : "zap",
         label : "Outfit Ideas",
-        screen: "OutfitIdeas",
+        screen: "Home",
         color : "primary",
     },
     {
@@ -59,6 +60,7 @@ const items: DrawerItemProps[] = [
 ];
 
 const Drawer = () => {
+    const navigation = useNavigation();
     return (
         <Box flex={1}>
             <Box flex={0.2} backgroundColor="white">

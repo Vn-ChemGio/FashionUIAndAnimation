@@ -1,13 +1,15 @@
 import React, {useRef}                                        from 'react';
 import {Image, StyleSheet, View}                              from 'react-native';
-import Slide, {SLIDE_HEIGHT}                                  from "./Slide";
-import {SCREEN_WIDTH, SPLASH_SCREEN_BORDER_RADIUS}            from "../../../Constants";
+
 import Animated, {divide, Extrapolate, interpolate, multiply} from 'react-native-reanimated'
 import {interpolateColor, useScrollHandler}                   from "react-native-redash/lib/module/v1";
+
+import Slide, {SLIDE_HEIGHT}                                  from "./Slide";
 import SubSlide                                               from "./SubSlide";
 import Dot                                                    from "./Dot";
-import {AuthenticationProps}                                  from "../../navigators";
 
+import {AuthenticationProps}                                  from "../../navigators";
+import {SCREEN_WIDTH, SPLASH_SCREEN_BORDER_RADIUS}            from "../../../Constants";
 export  const slides     = [
     {
         title      : "Relaxed",

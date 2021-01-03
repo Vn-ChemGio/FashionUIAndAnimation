@@ -1,12 +1,12 @@
-import { DrawerNavigationProp } from "@react-navigation/drawer";
-import { useNavigation } from "@react-navigation/native";
-import React from "react";
-import { RectButton } from "react-native-gesture-handler";
+import {DrawerNavigationProp} from "@react-navigation/drawer";
+import {useNavigation}        from "@react-navigation/native";
+import React                  from "react";
+import {RectButton}           from "react-native-gesture-handler";
 
-import { RoundedIcon }      from "../../components";
-import { HomeRoutes }       from "../../navigators";
-import { Box, Theme, Text } from "../../../Theme";
-import {useTheme}           from "@shopify/restyle";
+import {userTheme, Theme}       from "../../layouts";
+import {HomeRoutes}             from "../../navigators";
+import {RoundedIcon, Box, Text} from "../../components";
+
 
 interface BaseDrawerItem {
     icon: string;
@@ -24,19 +24,17 @@ interface OnPressDrawerItem extends BaseDrawerItem {
 
 export type DrawerItemProps = ScreenDrawerItem | OnPressDrawerItem;
 
-const DrawerItem = ({ icon, color, label, ...props }: DrawerItemProps) => {
-    const theme = useTheme<Theme>();
-    const navigation = useNavigation<
-        DrawerNavigationProp<HomeRoutes, "Home">
-        >();
+const DrawerItem = ({icon, color, label, ...props}: DrawerItemProps) => {
+    const theme      = userTheme();
+    const navigation = useNavigation<DrawerNavigationProp<HomeRoutes, "Home">>();
     return (
         <RectButton
-            onPress={() =>{}
-                // "screen" in props
-                // ? navigation.navigate(props.screen)
-                // : props.onPress(navigation)
+            onPress={() =>
+                "screen" in props
+                ? navigation.navigate(props.screen)
+                : props.onPress(navigation)
             }
-            style={{ borderRadius: theme.borderRadii.s}}
+            style={{borderRadius: theme.borderRadii.s}}
         >
             <Box flexDirection="row" alignItems="center" padding="s">
                 <RoundedIcon

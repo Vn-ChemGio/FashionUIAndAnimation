@@ -6,13 +6,11 @@ import Animated, {
     Extrapolate,
     interpolate,
 } from "react-native-reanimated";
-import {
-    mix,
-    mixColor,
-    usePanGestureHandler,
-} from "react-native-redash/lib/module/v1";
+import {mix, mixColor, usePanGestureHandler} from "react-native-redash/lib/module/v1";
 
-import { Box } from "../../../Theme";
+import {Box} from '../../components'
+
+
 
 import { useSpring } from "./Animations";
 
