@@ -38,6 +38,7 @@ const Card = ({ position, onSwipe, source, step }: CardProps) => {
     const backgroundColor = mixColor(position, "#C9E9E7", "#74BCB8");
     const translateYOffset = mix(position, 0, -50);
     const scale = mix(position, 1, 0.9);
+
     const imageScale = interpolate(position, {
         inputRange: [0, step],
         outputRange: [1.2, 1],
