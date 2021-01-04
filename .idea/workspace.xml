@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b60e3721-e427-4ac5-8c3f-226b8993c161" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/App/Favorites/Favorites.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/Favorites/Footer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/Favorites/Outfit.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App/Favorites/TopCurve.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Drawer/DrawerItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Drawer/DrawerItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App/Home/Background.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Home/Background.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SocialLogin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SocialLogin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="b60e3721-e427-4ac5-8c3f-226b8993c161" name="Default Changelist" comment="Add favorites page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Drawer/Drawer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Drawer/Drawer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App/Favorites/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/App/Favorites/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigators/HomeNavigator.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigators/HomeNavigator.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,8 +44,23 @@
       <option name="presentableId" value="Default" />
       <updated>1609733803728</updated>
       <workItem from="1609733804822" duration="223000" />
-      <workItem from="1609734043432" duration="3733000" />
+      <workItem from="1609734043432" duration="3909000" />
     </task>
+    <task id="LOCAL-00001" summary="Add favorites page">
+      <created>1609751259891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609751259891</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add favorites page">
+      <created>1609751268377</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1609751268377</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -69,5 +76,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add favorites page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add favorites page" />
   </component>
 </project>
