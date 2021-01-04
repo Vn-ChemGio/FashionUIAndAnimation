@@ -5,7 +5,7 @@ import {useSafeAreaInsets}       from 'react-native-safe-area-context';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import Constants                 from "expo-constants";
 
-import {userTheme, Box}          from "../layouts";
+import {useTheme, Box}          from "../layouts";
 
 export const assets            = [
     require('./assets/patterns/1.jpg'),
@@ -27,7 +27,7 @@ interface ContainerProps {
 const Container = ({children, footer, pattren}: ContainerProps) => {
 
     const insets = useSafeAreaInsets();
-    const theme  = userTheme();
+    const theme  = useTheme();
     const asset  = assets[pattren];
 
     return (

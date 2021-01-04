@@ -1,11 +1,11 @@
 import React                     from "react";
 import {View, StyleSheet, Image} from "react-native";
 
-import {palette, userTheme, Box} from "../../layouts";
+import {palette, useTheme, Box} from "../../layouts";
 
 export const assets = [require("./assets/background.png")]
 const Background    = () => {
-    const theme = userTheme();
+    const theme = useTheme();
     return (
         <View style={StyleSheet.absoluteFill}>
             <Box flex={1 / 3} style={{backgroundColor: palette.lightBlue}}>

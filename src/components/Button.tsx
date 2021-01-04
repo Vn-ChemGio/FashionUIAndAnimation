@@ -2,7 +2,7 @@ import React        from 'react';
 import {StyleSheet} from 'react-native';
 import {RectButton} from "react-native-gesture-handler";
 
-import {userTheme, Text} from "../layouts";
+import {useTheme, Text} from "../layouts";
 
 interface ButtonProps {
     variant: "default" | "primary",
@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 
 const Button = ({variant, label, onPress}: ButtonProps) => {
-    const theme           = userTheme();
+    const theme           = useTheme();
     const backgroundColor = variant === 'primary' ? theme.colors.primary : theme.colors.grey;
     const color           = variant === 'primary' ? theme.colors.white : theme.colors.text;
     return (

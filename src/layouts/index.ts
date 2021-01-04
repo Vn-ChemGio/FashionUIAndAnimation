@@ -5,7 +5,7 @@ export * from './Theme';
 
 export const Text      = createText<Theme>();
 export const Box       = createBox<Theme>();
-export const userTheme = () => useReTheme<Theme>();
+export const useTheme = () => useReTheme<Theme>();
 
 import theme from "./Theme";
 

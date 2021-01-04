@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react'
 import Svg, {Path}      from 'react-native-svg'
-import {Box, userTheme} from '../layouts';
+import {Box, useTheme} from '../layouts';
 
 
 interface SocialIconProps {
@@ -54,7 +54,7 @@ const Apple = () => (
 )
 
 const SocialIcon = ({children}: SocialIconProps) => {
-    const theme = userTheme();
+    const theme = useTheme();
     const SIZE  = theme.borderRadii?.l || 25 * 2
 
     return (

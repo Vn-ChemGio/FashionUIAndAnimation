@@ -3,7 +3,7 @@ import {useNavigation}        from "@react-navigation/native";
 import React                  from "react";
 import {RectButton}           from "react-native-gesture-handler";
 
-import {userTheme, Theme, Box, Text} from "../../layouts";
+import {useTheme, Theme, Box, Text} from "../../layouts";
 import {HomeRoutes}                  from "../../navigators";
 import {RoundedIcon}                 from "../../components";
 
@@ -25,7 +25,7 @@ interface OnPressDrawerItem extends BaseDrawerItem {
 export type DrawerItemProps = ScreenDrawerItem | OnPressDrawerItem;
 
 const DrawerItem = ({icon, color, label, ...props}: DrawerItemProps) => {
-    const theme      = userTheme();
+    const theme      = useTheme();
     const navigation = useNavigation<DrawerNavigationProp<HomeRoutes, "Home">>();
     return (
         <RectButton
