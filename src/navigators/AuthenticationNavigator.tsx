@@ -40,7 +40,7 @@ const AuthenticationNavigator = () => {
 
 export interface AuthenticationProps<RouteName extends keyof AuthenticationRoutes> {
     navigation: CompositeNavigationProp<StackNavigationProp<AuthenticationRoutes, RouteName>,
-        DrawerNavigationProp<HomeRoutes, "Home">>,
+        DrawerNavigationProp<HomeRoutes, "Homes">>,
     route: RouteProp<AuthenticationRoutes, RouteName>;
 }
 

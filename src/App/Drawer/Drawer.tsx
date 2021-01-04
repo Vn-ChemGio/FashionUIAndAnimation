@@ -1,12 +1,13 @@
-import React   from "react";
-import {Image} from "react-native";
+import React              from "react";
+import {Image, StyleProp} from "react-native";
 
 import {DrawerActions, CommonActions, useNavigation} from "@react-navigation/native";
 
-import {Text, Box}                   from "../../layouts";
+import {Text, Box, useTheme}         from "../../layouts";
 import {Header}                      from "../../components";
 import {DRAWER_WIDTH}                from "../../../Constants";
 import DrawerItem, {DrawerItemProps} from "./DrawerItem";
+import {DrawerContentOptions}        from "@react-navigation/drawer";
 
 
 const aspectRatio = 750 / 1125;
@@ -18,7 +19,7 @@ const items: DrawerItemProps[] = [
     {
         icon  : "zap",
         label : "Outfit Ideas",
-        screen: "Home",
+        screen: "Homes",
         color : "primary",
     },
     {
@@ -42,7 +43,7 @@ const items: DrawerItemProps[] = [
     {
         icon  : "settings",
         label : "Notification Settings",
-        screen: "Settings",
+        screen: "Notifications",
         color : "drawer4",
     },
     {
@@ -59,8 +60,10 @@ const items: DrawerItemProps[] = [
     },
 ];
 
-const Drawer = () => {
-    //const navigation = useNavigation();
+
+const Drawer = ({} : DrawerContentOptions) => {
+    const navigation = useNavigation();
+    const theme      = useTheme();
     return (
         <Box flex={1}>
             <Box flex={0.2} backgroundColor="white">
@@ -77,7 +80,7 @@ const Drawer = () => {
                         title="Menu"
                         left={{
                             icon   : "x",
-                            onPress: () => true // navigation.dispatch(DrawerActions.closeDrawer),
+                            onPress: () => navigation.dispatch(DrawerActions.closeDrawer),
                         }}
                         right={{
                             icon   : "shopping-bag",
@@ -137,7 +140,7 @@ const Drawer = () => {
                     style={{
                         width              : DRAWER_WIDTH,
                         height,
-                        borderTopLeftRadius: 75,
+                        borderTopLeftRadius: theme.borderRadii.xl,
                     }}
                 />
             </Box>

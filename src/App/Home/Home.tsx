@@ -34,7 +34,7 @@ const step  = 1 / (
 );
 
 
-const Home = ({navigation}: HomeNavigationProps<"Home">) => {
+const Home = ({navigation}: HomeNavigationProps<"Homes">) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const aIndex                          = useTransition(currentIndex);
 

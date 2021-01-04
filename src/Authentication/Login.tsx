@@ -41,7 +41,7 @@ const Login = ({navigation}: AuthenticationProps<"Login">) => {
           }           = useFormik({
         initialValues   : {email: 'vn.chemgio@yahoo.com', password: '1234dadad5678', remember: true},
         validationSchema: LoginSchema,
-        onSubmit        : () => navigation.navigate("Home")
+        onSubmit        : () => navigation.navigate("App")
     });
 
     return (
