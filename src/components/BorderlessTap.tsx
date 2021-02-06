@@ -19,7 +19,7 @@ import Animated, {
 import {
     useTapGestureHandler,
     useClock,
-} from "react-native-redash/lib/module/v1";
+} from "react-native-redash";
 
 interface BorderTapProps {
     onPress: () => void;

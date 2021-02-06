@@ -2,7 +2,7 @@ import React, {useRef}                                        from 'react';
 import {Image, StyleSheet, View}                              from 'react-native';
 
 import Animated, {divide, Extrapolate, interpolate, multiply} from 'react-native-reanimated'
-import {interpolateColor, useScrollHandler}                   from "react-native-redash/lib/module/v1";
+import {interpolateColor, useScrollHandler}                   from "react-native-redash";
 
 import Slide, {SLIDE_HEIGHT}                                  from "./Slide";
 import SubSlide                                               from "./SubSlide";
